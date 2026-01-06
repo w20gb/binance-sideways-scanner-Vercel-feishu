@@ -1,0 +1,47 @@
+2026-01-06 23:40:00,372 - INFO - 正在加载市场信息...
+2026-01-06 23:46:05,700 - INFO - 已启用代理: http://127.0.0.1:2333
+2026-01-06 23:46:05,709 - INFO - 正在加载市场信息...
+2026-01-06 23:46:09,800 - ERROR - 主循环发生严重错误: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+Traceback (most recent call last):
+  File "H:\MyCode\BTC\威科夫量价异常\wyckoff_monitor.py", line 234, in run
+    await self.initialize_data()
+  File "H:\MyCode\BTC\威科夫量价异常\wyckoff_monitor.py", line 194, in initialize_data
+    await self._init_exchange()
+  File "H:\MyCode\BTC\威科夫量价异常\wyckoff_monitor.py", line 86, in _init_exchange
+    await self.exchange.load_markets()
+  File "C:\Python\Python311\Lib\site-packages\ccxt\async_support\base\exchange.py", line 341, in load_markets
+    raise e
+  File "C:\Python\Python311\Lib\site-packages\ccxt\async_support\base\exchange.py", line 333, in load_markets
+    result = await self.markets_loading
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python\Python311\Lib\site-packages\ccxt\async_support\base\exchange.py", line 300, in load_markets_helper
+    markets = await self.fetch_markets(params)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python\Python311\Lib\site-packages\ccxt\async_support\binance.py", line 3125, in fetch_markets
+    results = await asyncio.gather(*promisesRaw)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python\Python311\Lib\site-packages\ccxt\async_support\binance.py", line 11582, in request
+    response = await self.fetch2(path, api, method, params, headers, body, config)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python\Python311\Lib\site-packages\ccxt\async_support\base\exchange.py", line 988, in fetch2
+    raise e
+  File "C:\Python\Python311\Lib\site-packages\ccxt\async_support\base\exchange.py", line 978, in fetch2
+    return await self.fetch(request['url'], request['method'], request['headers'], request['body'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python\Python311\Lib\site-packages\ccxt\async_support\base\exchange.py", line 264, in fetch
+    self.handle_http_status_code(http_status_code, http_status_text, url, method, http_response)
+  File "C:\Python\Python311\Lib\site-packages\ccxt\base\exchange.py", line 1898, in handle_http_status_code
+    raise ErrorClass(self.id + ' ' + method + ' ' + url + ' ' + codeAsString + ' ' + reason + ' ' + body)
+ccxt.base.errors.ExchangeNotAvailable: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-01-06 23:48:12,354 - INFO - 已启用代理: http://127.0.0.1:2333
+2026-01-06 23:48:12,364 - INFO - 正在加载市场信息...
+2026-01-06 23:49:58,919 - INFO - 已启用代理: http://127.0.0.1:2333
+2026-01-06 23:49:58,927 - INFO - 正在加载市场信息...
+2026-01-06 23:50:34,094 - INFO - 已启用代理: http://127.0.0.1:2333
+2026-01-06 23:50:34,104 - INFO - 正在加载市场信息...
