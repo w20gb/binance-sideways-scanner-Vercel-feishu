@@ -55,9 +55,16 @@ jobs:
       run: |
         python sideways_scanner.py
 
-    - name: (可选步骤) 将生成的 sideways_report.md 发送到钉钉/飞书
+    - name: 在日志中输出完整横盘榜单
       run: |
-        # 这一步可以接上您的飞书/提醒 API。
-        # 这里是一段演示代码，您可以随时根据通知系统补充逻辑：
-        # echo "横盘报告完毕！可以通过 actions 控制台查看 report 文件。"
-        # cat sideways_report.md
+        echo "============================================"
+        echo "       SIDEWAYS REPORT OUTPUT"
+        echo "============================================"
+        cat sideways_report.md
+
+    - name: 上传报告为可下载工件
+      uses: actions/upload-artifact@v4
+      with:
+        name: sideways-report
+        path: sideways_report.md
+        retention-days: 30
