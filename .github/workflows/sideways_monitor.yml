@@ -20,11 +20,23 @@ jobs:
         python-version: '3.11'
 
     - name: 安装基础引擎依赖 (requests)
-      run: pip install requests
+      run: pip install requests pysocks
+
+    - name: 初始化暗网路由协议 (Tor) 并强制非美节点出口
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y tor
+        # 强制使得最终 IP 出口位于非禁运国家 (德国 de, 法国 fr, 日本 jp, 新加坡 sg)
+        echo 'ExitNodes {de},{fr},{jp},{sg},{gb}' | sudo tee -a /etc/tor/torrc
+        echo 'StrictNodes 1' | sudo tee -a /etc/tor/torrc
+        sudo systemctl restart tor
+        # 验证 Tor 服务是否正常监听 9050
+        netstat -plnt | grep 9050
 
     - name: 启动扫描核心并拉取横盘标的
       env:
-        # 这里注入您刚刚贴出的极品 Worker 伪装节点
+        USE_TOR: "true"
+        # 仅本地备用使用，云端全权交给 Tor
         BINANCE_BASE_URL: https://binance.794988.xyz
       run: |
         python sideways_scanner.py
