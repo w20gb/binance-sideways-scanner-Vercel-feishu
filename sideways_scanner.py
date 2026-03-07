@@ -14,7 +14,7 @@ import numpy as np
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta
 
-from binance_gateway import get_all_usdt_perpetuals, fetch_klines, USE_TOR
+from binance_gateway import get_all_usdt_perpetuals, fetch_klines, fetch_oi_history, USE_TOR
 
 # ================= 配置偏好 (全面环境变量化) =================
 # 从环境变量读取，容错处理：当传入空字符串时，使用 or 降级到默认值
@@ -142,6 +142,10 @@ def notify_feishu(valid_results, bj_time):
              price = f'${r["price"]:g}'
              link = f"[{sym}](https://www.coinglass.com/tv/zh/Binance_{sym})"
 
+             # OI 异动数据
+             oi_change = r.get("oi_change_24h_pct", 0)
+             oi_str = f"🚀 **OI暴增 +{oi_change:.1f}%**" if oi_change > 20 else f"OI {oi_change:+.1f}%"
+
              curr_rank = i + 1
              trend_icon = "➖"
              if sym not in history:
@@ -156,7 +160,7 @@ def notify_feishu(valid_results, bj_time):
                      trend_icon = "➖" # 排名持平
 
              medal = "🥇" if i == 0 else "🥈" if i == 1 else "🥉" if i == 2 else f" {i+1}."
-             md_lines.append(f"{medal} **{link}** {trend_icon} | **{dur}** 根缩圈 | 现 BBW {amp} | 现价 {price}")
+             md_lines.append(f"{medal} **{link}** {trend_icon} | **{dur}** 根缩圈 | 现 BBW {amp} | {oi_str} | 现价 {price}")
 
          if len(valid_results) > 25:
              md_lines.append(f"\n*(共有 {len(valid_results)} 个币满足条件，这里仅展示前25名)*")
@@ -188,6 +192,30 @@ def notify_feishu(valid_results, bj_time):
     except Exception as e:
         print(f"❌ 飞书推送异常: {e}")
 
+
+def fetch_oi_for_candidates(valid_results):
+    """为筛选出的核心标的并发拉取过去 24h 的持仓量异动数据"""
+    print(f"开始为 {len(valid_results)} 个核心标的拉取 OI 异动数据...")
+
+    def _fetch_oi(r):
+        sym = r["symbol"]
+        oi_hist = fetch_oi_history(sym, period="1d", limit=2)
+        r["oi_change_24h_pct"] = 0
+        if oi_hist and len(oi_hist) >= 2:
+            try:
+                # 倒数第二个是昨天的，最后一个是目前的
+                old_oi = float(oi_hist[-2]["sumOpenInterestValue"])
+                new_oi = float(oi_hist[-1]["sumOpenInterestValue"])
+                if old_oi > 0:
+                    r["oi_change_24h_pct"] = (new_oi - old_oi) / old_oi * 100
+            except Exception:
+                pass
+        return r
+
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        futures = [executor.submit(_fetch_oi, r) for r in valid_results]
+        for _ in as_completed(futures):
+            pass
 
 def main():
     bj_time = datetime.utcnow() + timedelta(hours=8)
@@ -237,28 +265,36 @@ def main():
     # 仅保留缩圈时长 >= MIN_DURATION 的核心标的
     valid_results = [r for r in results if r["duration"] >= MIN_DURATION]
 
+    # 并发拉取 OI 异动数据 (为最终榜单赋能)
+    if valid_results:
+        fetch_oi_for_candidates(valid_results)
+
+        # 二次排序：由于已经保证了 MIN_DURATION 收敛，此时我们让同等收敛时长的币，按 OI 增幅作为第二排序权重，体现“资金异动暗流”
+        valid_results.sort(key=lambda x: (x["duration"], x.get("oi_change_24h_pct", 0)), reverse=True)
+
     # 1. 写入 Markdown 本地报告 (作为全量数据归档)
     tunnel_info = "Tor 匿名网络" if USE_TOR else "Vercel Edge 反代"
     report_path = "sideways_report.md"
     with open(report_path, "w", encoding="utf-8", errors="ignore") as f:
-        f.write("# 📊 币安 USDT 永续合约【极佳横盘猎手: 布林带】全量榜单\n\n")
+        f.write("# 📊 币安 USDT 永续合约【极佳横盘猎手: 布林带 + OI 异动】全量榜单\n\n")
         f.write(f"> **生成时间**: {bj_time.strftime('%Y-%m-%d %H:%M:%S')} (UTC+8)\n")
         f.write(f"> **运算规则**: 追溯过去 {LIMIT} 根 `{INTERVAL}` 级别K线，寻找布林带极度压缩 (BBW < **{BBW_THRESHOLD*100:.1f}%**) 且蓄势最久的标的。\n")
         f.write(f"> **网络隧道**: `{tunnel_info}`\n\n")
 
-        f.write("| 排名 | 合约标的 | 极致缩圈时长 (K线数) | 当前布林宽度 (BBW) | 当前价格 | TradingView |\n")
-        f.write("|---|---|---|---|---|---|\n")
+        f.write("| 排名 | 合约标的 | 极致缩圈 | 当前布林宽度 (BBW) | 24h OI 增幅 | 当前价格 | TradingView |\n")
+        f.write("|---|---|---|---|---|---|---|\n")
 
         for i, r in enumerate(valid_results):
             sym = r["symbol"]
-            dur = r["duration"]
+            dur = f'{r["duration"]} 根'
             amp = f'{r["amplitude"] * 100:.2f}%'
+            oi_change = f'{r.get("oi_change_24h_pct", 0):+.2f}%'
             price = f'${r["price"]:g}'
             link = f"[直达](https://www.coinglass.com/tv/zh/Binance_{sym})"
-            f.write(f"| {i+1} | **{sym}** | **{dur}** | {amp} | {price} | {link} |\n")
+            f.write(f"| {i+1} | **{sym}** | **{dur}** | {amp} | **{oi_change}** | {price} | {link} |\n")
 
         if not valid_results:
-             f.write("| - | 当前全网无极端横盘标的 | - | - | - | - |\n")
+             f.write("| - | 当前全网无极端横盘标的 | - | - | - | - | - |\n")
 
     print(f"\n[OK] 全量报告已归档至: {report_path}")
 

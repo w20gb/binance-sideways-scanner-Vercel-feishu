@@ -126,7 +126,22 @@ def fetch_open_interest(symbol):
     """
     拉取持仓量（预留接口，供未来持仓异动监控使用）。
     """
-    url = f"{FAPI_BASE}/fapi/v2/openInterest?symbol={symbol}"
+    url = f"{FAPI_BASE}/fapi/v1/openInterest?symbol={symbol}"
+    try:
+        res = _session.get(url, timeout=30)
+        if res.status_code == 200:
+            return res.json()
+    except Exception:
+        pass
+    return None
+
+def fetch_oi_history(symbol, period="1h", limit=24):
+    """
+    拉取历史持仓总额 (Open Interest History)
+    period: 5m, 15m, 30m, 1h, 2h, 4h, 6h, 12h, 1d
+    limit: max 500
+    """
+    url = f"{FAPI_BASE}/futures/data/openInterestHist?symbol={symbol}&period={period}&limit={limit}"
     try:
         res = _session.get(url, timeout=30)
         if res.status_code == 200:

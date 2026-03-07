@@ -35,43 +35,43 @@
     "AEVOUSDT": {
         "rank": 12
     },
-    "HAEDALUSDT": {
+    "DOLOUSDT": {
         "rank": 13
     },
-    "DOLOUSDT": {
+    "SFPUSDT": {
         "rank": 14
     },
-    "SFPUSDT": {
+    "DEXEUSDT": {
         "rank": 15
     },
-    "DEXEUSDT": {
+    "HMSTRUSDT": {
         "rank": 16
     },
-    "HMSTRUSDT": {
+    "B2USDT": {
         "rank": 17
     },
-    "B2USDT": {
+    "RECALLUSDT": {
         "rank": 18
     },
-    "RECALLUSDT": {
+    "1000XECUSDT": {
         "rank": 19
     },
-    "1000XECUSDT": {
+    "WAXPUSDT": {
         "rank": 20
     },
     "TWTUSDT": {
         "rank": 21
     },
-    "WAXPUSDT": {
+    "AUCTIONUSDT": {
         "rank": 22
     },
-    "LUMIAUSDT": {
+    "MANTAUSDT": {
         "rank": 23
     },
-    "AUCTIONUSDT": {
+    "POLYXUSDT": {
         "rank": 24
     },
-    "MANTAUSDT": {
+    "POWRUSDT": {
         "rank": 25
     }
 }
