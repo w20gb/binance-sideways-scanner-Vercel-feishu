@@ -100,8 +100,8 @@ def notify_feishu(valid_results, bj_time):
     else:
          md_lines.append("\n🏆 **【极佳横盘猎手: 布林带收敛榜】(按时长降序)**\n")
 
-         # 飞书卡片篇幅有限，最多推送前 15 名最极致的
-         for i, r in enumerate(valid_results[:15]):
+         # 飞书卡片篇幅有限，最多推送前 25 名最极致的
+         for i, r in enumerate(valid_results[:25]):
              sym = r["symbol"]
              dur = r["duration"]
              amp = f'{r["amplitude"] * 100:.2f}%'
@@ -111,8 +111,8 @@ def notify_feishu(valid_results, bj_time):
              medal = "🥇" if i == 0 else "🥈" if i == 1 else "🥉" if i == 2 else f" {i+1}."
              md_lines.append(f"{medal} **{link}** | **{dur}** 根缩圈 | 现 BBW {amp} | 现价 {price}")
 
-         if len(valid_results) > 15:
-             md_lines.append(f"\n*(共有 {len(valid_results)} 个币满足条件，这里仅展示前15名)*")
+         if len(valid_results) > 25:
+             md_lines.append(f"\n*(共有 {len(valid_results)} 个币满足条件，这里仅展示前25名)*")
 
     card = {
         "msg_type": "interactive",
