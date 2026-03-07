@@ -16,15 +16,16 @@ from datetime import datetime, timedelta
 from binance_gateway import get_all_usdt_perpetuals, fetch_klines, USE_TOR
 
 # ================= 配置偏好 (全面环境变量化) =================
-INTERVAL = os.environ.get("INTERVAL", "1h")
-LIMIT = int(os.environ.get("LIMIT", "200"))
-BBW_THRESHOLD = float(os.environ.get("BBW_THRESHOLD", "0.05")) # 布林带宽度阈值 (5%)
-BB_WINDOW = int(os.environ.get("BB_WINDOW", "20"))             # 布林带计算周期 (默认 20)
-BB_TOLERANCE = int(os.environ.get("BB_TOLERANCE", "1"))        # 容忍单根K线的假突破/插针扩大布林带的次数
-MIN_DURATION = int(os.environ.get("MIN_DURATION", "6"))        # 最低上榜条件 (默认收敛 > 6 根 K 线)
+# 从环境变量读取，容错处理：当传入空字符串时，使用 or 降级到默认值
+INTERVAL = os.environ.get("INTERVAL") or "1h"
+LIMIT = int(os.environ.get("LIMIT") or "200")
+BBW_THRESHOLD = float(os.environ.get("BBW_THRESHOLD") or "0.05") # 布林带宽度阈值 (5%)
+BB_WINDOW = int(os.environ.get("BB_WINDOW") or "20")             # 布林带计算周期 (默认 20)
+BB_TOLERANCE = int(os.environ.get("BB_TOLERANCE") or "1")        # 容忍单根K线的假突破/插针扩大布林带的次数
+MIN_DURATION = int(os.environ.get("MIN_DURATION") or "6")        # 最低上榜条件 (默认收敛 > 6 根 K 线)
 
 # 飞书 Webhook 机器人地址
-FEISHU_WEBHOOK = os.environ.get("FEISHU_WEBHOOK", "")
+FEISHU_WEBHOOK = os.environ.get("FEISHU_WEBHOOK") or ""
 # =========================================================
 
 
