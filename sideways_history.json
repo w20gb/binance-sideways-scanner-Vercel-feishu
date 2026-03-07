@@ -41,37 +41,37 @@
     "1000XECUSDT": {
         "rank": 14
     },
-    "WAXPUSDT": {
+    "TWTUSDT": {
         "rank": 15
     },
-    "TWTUSDT": {
+    "WAXPUSDT": {
         "rank": 16
     },
-    "AUCTIONUSDT": {
+    "MANTAUSDT": {
         "rank": 17
     },
-    "MANTAUSDT": {
+    "POLYXUSDT": {
         "rank": 18
     },
     "POWRUSDT": {
         "rank": 19
     },
-    "POLYXUSDT": {
+    "NIGHTUSDT": {
         "rank": 20
     },
-    "NIGHTUSDT": {
+    "LUNA2USDT": {
         "rank": 21
     },
-    "LUNA2USDT": {
+    "THEUSDT": {
         "rank": 22
     },
-    "THEUSDT": {
+    "IOTAUSDT": {
         "rank": 23
     },
-    "IOTAUSDT": {
+    "ARKUSDT": {
         "rank": 24
     },
-    "ARKUSDT": {
+    "JASMYUSDT": {
         "rank": 25
     }
 }
