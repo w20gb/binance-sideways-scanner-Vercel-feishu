@@ -40,13 +40,6 @@ jobs:
         echo "============================================"
         cat sideways_report.md
 
-    - name: 上传报告为可下载工件
-      uses: actions/upload-artifact@v4
-      with:
-        name: sideways-report
-        path: sideways_report.md
-        retention-days: 30
-
     - name: 保存历史异动数据到代码库
       run: |
         git config --global user.name 'GitHub Action'
