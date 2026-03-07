@@ -62,16 +62,16 @@
     "TWTUSDT": {
         "rank": 21
     },
-    "AUCTIONUSDT": {
+    "MANTAUSDT": {
         "rank": 22
     },
-    "MANTAUSDT": {
+    "AUCTIONUSDT": {
         "rank": 23
     },
-    "POLYXUSDT": {
+    "POWRUSDT": {
         "rank": 24
     },
-    "POWRUSDT": {
+    "POLYXUSDT": {
         "rank": 25
     }
 }
