@@ -41,37 +41,37 @@
     "B2USDT": {
         "rank": 14
     },
-    "RECALLUSDT": {
+    "1000XECUSDT": {
         "rank": 15
     },
-    "1000XECUSDT": {
+    "WAXPUSDT": {
         "rank": 16
     },
-    "WAXPUSDT": {
+    "TWTUSDT": {
         "rank": 17
     },
-    "TWTUSDT": {
+    "MANTAUSDT": {
         "rank": 18
     },
     "AUCTIONUSDT": {
         "rank": 19
     },
-    "MANTAUSDT": {
+    "POWRUSDT": {
         "rank": 20
     },
-    "POWRUSDT": {
+    "POLYXUSDT": {
         "rank": 21
     },
-    "POLYXUSDT": {
+    "NIGHTUSDT": {
         "rank": 22
     },
-    "NIGHTUSDT": {
+    "LUNA2USDT": {
         "rank": 23
     },
-    "LUNA2USDT": {
+    "THEUSDT": {
         "rank": 24
     },
-    "THEUSDT": {
+    "IOTAUSDT": {
         "rank": 25
     }
 }
