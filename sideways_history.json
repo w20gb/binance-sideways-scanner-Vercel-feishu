@@ -8,70 +8,70 @@
     "OGUSDT": {
         "rank": 3
     },
-    "ATUSDT": {
+    "HIVEUSDT": {
         "rank": 4
     },
-    "HIVEUSDT": {
+    "HYPERUSDT": {
         "rank": 5
     },
-    "HYPERUSDT": {
+    "PAXGUSDT": {
         "rank": 6
     },
-    "PAXGUSDT": {
+    "SFPUSDT": {
         "rank": 7
     },
-    "SFPUSDT": {
+    "HMSTRUSDT": {
         "rank": 8
     },
-    "HMSTRUSDT": {
+    "1000XECUSDT": {
         "rank": 9
     },
-    "1000XECUSDT": {
+    "WAXPUSDT": {
         "rank": 10
     },
-    "WAXPUSDT": {
+    "TWTUSDT": {
         "rank": 11
     },
-    "TWTUSDT": {
+    "POLYXUSDT": {
         "rank": 12
     },
-    "POLYXUSDT": {
+    "NIGHTUSDT": {
         "rank": 13
     },
-    "NIGHTUSDT": {
+    "IOTAUSDT": {
         "rank": 14
     },
-    "THEUSDT": {
+    "ARKUSDT": {
         "rank": 15
     },
-    "IOTAUSDT": {
+    "MINAUSDT": {
         "rank": 16
     },
-    "ARKUSDT": {
+    "SONICUSDT": {
         "rank": 17
     },
-    "MINAUSDT": {
+    "KASUSDT": {
         "rank": 18
     },
-    "SONICUSDT": {
+    "JSTUSDT": {
         "rank": 19
     },
-    "KASUSDT": {
+    "YFIUSDT": {
         "rank": 20
     },
-    "JSTUSDT": {
+    "SPKUSDT": {
         "rank": 21
     },
-    "YFIUSDT": {
+    "TONUSDT": {
         "rank": 22
     },
-    "SPKUSDT": {
+    "ASTERUSDT": {
         "rank": 23
     },
-    "TONUSDT": {
+    "ASRUSDT": {
         "rank": 24
     },
-    "ASTERUSDT": {
+    "CCUSDT": {
         "rank": 25
     }
 }
