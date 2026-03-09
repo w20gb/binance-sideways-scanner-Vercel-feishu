@@ -26,52 +26,52 @@
     "HMSTRUSDT": {
         "rank": 9
     },
-    "B2USDT": {
+    "1000XECUSDT": {
         "rank": 10
     },
-    "1000XECUSDT": {
+    "WAXPUSDT": {
         "rank": 11
     },
-    "WAXPUSDT": {
+    "TWTUSDT": {
         "rank": 12
     },
-    "TWTUSDT": {
+    "POLYXUSDT": {
         "rank": 13
     },
-    "POLYXUSDT": {
+    "NIGHTUSDT": {
         "rank": 14
     },
-    "NIGHTUSDT": {
+    "THEUSDT": {
         "rank": 15
     },
-    "THEUSDT": {
+    "IOTAUSDT": {
         "rank": 16
     },
-    "IOTAUSDT": {
+    "ARKUSDT": {
         "rank": 17
     },
-    "ARKUSDT": {
+    "MINAUSDT": {
         "rank": 18
     },
-    "MINAUSDT": {
+    "SONICUSDT": {
         "rank": 19
     },
-    "SONICUSDT": {
+    "KASUSDT": {
         "rank": 20
     },
-    "KASUSDT": {
+    "JSTUSDT": {
         "rank": 21
     },
-    "JSTUSDT": {
+    "YFIUSDT": {
         "rank": 22
     },
-    "YFIUSDT": {
+    "SPKUSDT": {
         "rank": 23
     },
-    "SPKUSDT": {
+    "TONUSDT": {
         "rank": 24
     },
-    "TONUSDT": {
+    "ASTERUSDT": {
         "rank": 25
     }
 }
