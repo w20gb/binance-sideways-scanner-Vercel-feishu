@@ -62,16 +62,16 @@
     "ASRUSDT": {
         "rank": 21
     },
-    "CCUSDT": {
+    "BCHUSDT": {
         "rank": 22
     },
-    "BCHUSDT": {
+    "CKBUSDT": {
         "rank": 23
     },
-    "CKBUSDT": {
+    "ACHUSDT": {
         "rank": 24
     },
-    "ACHUSDT": {
+    "USTCUSDT": {
         "rank": 25
     }
 }
