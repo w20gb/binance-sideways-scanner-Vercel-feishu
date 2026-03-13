@@ -5,73 +5,73 @@
     "SPELLUSDT": {
         "rank": 2
     },
-    "MINAUSDT": {
+    "POLYXUSDT": {
         "rank": 3
     },
-    "POLYXUSDT": {
+    "TWTUSDT": {
         "rank": 4
     },
-    "TWTUSDT": {
+    "SONICUSDT": {
         "rank": 5
     },
-    "SONICUSDT": {
+    "HIVEUSDT": {
         "rank": 6
     },
-    "HIVEUSDT": {
+    "PAXGUSDT": {
         "rank": 7
     },
-    "PAXGUSDT": {
+    "HYPERUSDT": {
         "rank": 8
     },
-    "HYPERUSDT": {
+    "KASUSDT": {
         "rank": 9
     },
-    "KASUSDT": {
+    "YFIUSDT": {
         "rank": 10
     },
-    "YFIUSDT": {
+    "ASTERUSDT": {
         "rank": 11
     },
-    "ASTERUSDT": {
+    "ASRUSDT": {
         "rank": 12
     },
-    "ASRUSDT": {
+    "BCHUSDT": {
         "rank": 13
     },
-    "BCHUSDT": {
+    "ACHUSDT": {
         "rank": 14
     },
-    "ACHUSDT": {
+    "USTCUSDT": {
         "rank": 15
     },
-    "USTCUSDT": {
+    "IDUSDT": {
         "rank": 16
     },
-    "IDUSDT": {
+    "LSKUSDT": {
         "rank": 17
     },
-    "LSKUSDT": {
+    "ZILUSDT": {
         "rank": 18
     },
-    "FUSDT": {
+    "RVNUSDT": {
         "rank": 19
     },
-    "ZILUSDT": {
+    "PUNDIXUSDT": {
         "rank": 20
     },
-    "RVNUSDT": {
+    "GASUSDT": {
         "rank": 21
     },
-    "PUNDIXUSDT": {
+    "MEUSDT": {
         "rank": 22
     },
-    "GASUSDT": {
+    "NXPCUSDT": {
         "rank": 23
     },
-    "MEUSDT": {
+    "ALLUSDT": {
         "rank": 24
     },
-    "NXPCUSDT": {
+    "LTCUSDT": {
         "rank": 25
     }
 }
