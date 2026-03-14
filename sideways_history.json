@@ -5,10 +5,10 @@
     "SPELLUSDT": {
         "rank": 2
     },
-    "POLYXUSDT": {
+    "TWTUSDT": {
         "rank": 3
     },
-    "TWTUSDT": {
+    "POLYXUSDT": {
         "rank": 4
     },
     "KASUSDT": {
@@ -26,10 +26,10 @@
     "HYPERUSDT": {
         "rank": 9
     },
-    "ASTERUSDT": {
+    "ASRUSDT": {
         "rank": 10
     },
-    "ASRUSDT": {
+    "ASTERUSDT": {
         "rank": 11
     },
     "ACHUSDT": {
@@ -62,16 +62,16 @@
     "ALLUSDT": {
         "rank": 21
     },
-    "LTCUSDT": {
+    "ONTUSDT": {
         "rank": 22
     },
-    "ONTUSDT": {
+    "LTCUSDT": {
         "rank": 23
     },
     "BLURUSDT": {
         "rank": 24
     },
-    "GLMUSDT": {
+    "AERGOUSDT": {
         "rank": 25
     }
 }
