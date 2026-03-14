@@ -11,10 +11,10 @@
     "SPELLUSDT": {
         "rank": 4
     },
-    "ACHUSDT": {
+    "IDUSDT": {
         "rank": 5
     },
-    "IDUSDT": {
+    "ACHUSDT": {
         "rank": 6
     },
     "BLURUSDT": {
@@ -26,49 +26,49 @@
     "GASUSDT": {
         "rank": 9
     },
-    "TWTUSDT": {
+    "KASUSDT": {
         "rank": 10
     },
-    "KASUSDT": {
+    "TWTUSDT": {
         "rank": 11
     },
-    "USTCUSDT": {
+    "SUPERUSDT": {
         "rank": 12
     },
-    "LSKUSDT": {
+    "USTCUSDT": {
         "rank": 13
     },
-    "MEUSDT": {
+    "LSKUSDT": {
         "rank": 14
     },
-    "SONICUSDT": {
+    "MEUSDT": {
         "rank": 15
     },
     "HIVEUSDT": {
         "rank": 16
     },
-    "PAXGUSDT": {
+    "SONICUSDT": {
         "rank": 17
     },
-    "AERGOUSDT": {
+    "PAXGUSDT": {
         "rank": 18
     },
-    "PUNDIXUSDT": {
+    "AERGOUSDT": {
         "rank": 19
     },
     "HYPERUSDT": {
         "rank": 20
     },
-    "NXPCUSDT": {
+    "PUNDIXUSDT": {
         "rank": 21
     },
-    "ALLUSDT": {
+    "NXPCUSDT": {
         "rank": 22
     },
-    "ASTERUSDT": {
+    "ALLUSDT": {
         "rank": 23
     },
-    "SUPERUSDT": {
+    "ASTERUSDT": {
         "rank": 24
     },
     "IOSTUSDT": {
