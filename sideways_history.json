@@ -2,49 +2,49 @@
     "TRXUSDT": {
         "rank": 1
     },
-    "SPELLUSDT": {
+    "RVNUSDT": {
         "rank": 2
     },
-    "ACHUSDT": {
+    "SPELLUSDT": {
         "rank": 3
     },
     "IDUSDT": {
         "rank": 4
     },
-    "POLYXUSDT": {
+    "ACHUSDT": {
         "rank": 5
     },
-    "TWTUSDT": {
+    "POLYXUSDT": {
         "rank": 6
     },
-    "USTCUSDT": {
+    "TWTUSDT": {
         "rank": 7
     },
-    "KASUSDT": {
+    "USTCUSDT": {
         "rank": 8
     },
-    "LSKUSDT": {
+    "KASUSDT": {
         "rank": 9
     },
-    "HIVEUSDT": {
+    "LSKUSDT": {
         "rank": 10
     },
-    "SONICUSDT": {
+    "HIVEUSDT": {
         "rank": 11
     },
-    "PAXGUSDT": {
+    "SONICUSDT": {
         "rank": 12
     },
-    "HYPERUSDT": {
+    "PAXGUSDT": {
         "rank": 13
     },
-    "ASTERUSDT": {
+    "HYPERUSDT": {
         "rank": 14
     },
-    "RVNUSDT": {
+    "PUNDIXUSDT": {
         "rank": 15
     },
-    "PUNDIXUSDT": {
+    "ASTERUSDT": {
         "rank": 16
     },
     "GASUSDT": {
