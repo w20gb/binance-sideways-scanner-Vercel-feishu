@@ -280,46 +280,33 @@ def notify_feishu(valid_results, bj_time, history, all_results_dict):
         return
 
     time_str = bj_time.strftime("%Y-%m-%d %H:%M")
-
     md_lines = []
     md_lines.append(f"⏱️ **生成时间**: `{time_str}` (北京时间)")
     md_lines.append(f"⚙️ **参数**: 追溯 `{LIMIT}` 根 `{INTERVAL}` | BBW < **{BBW_THRESHOLD*100:.1f}%**")
-    md_lines.append(f"🔤 **排序方式**: 时长Top25按名称升序\n---")
+    md_lines.append(f"🔤 **排序说明**: 提供【时长排行】与【名称索引】双重视图\n---")
 
     if not valid_results:
          md_lines.append("\n✅ *当前全网无极致收敛标的，波动性正常释放中*")
     else:
-         md_lines.append("\n🏆 **【横盘雷达: 缩圈中的资金异动 (OI/Vol Ratio)】**\n")
+         # --- 第一阶段：横盘时长排行榜 (Top 10) ---
+         md_lines.append("\n🏆 **【榜单: 横盘时间最久 Top 10】**")
+         duration_results = sorted(valid_results, key=lambda x: (-x["duration"], x["amplitude"]))
 
-         # 飞书卡片篇幅有限，最多推送前 25 名
-         for i, r in enumerate(valid_results[:25]):
+         for i, r in enumerate(duration_results[:10]):
              sym = r["symbol"]
              dur = r["duration"]
              curr_bbw = r["amplitude"]
              price = f'${r["price"]:g}'
-
-             # 提取 OI, Volume 和 Ratio
-             oi_val = r.get("oi_value", 0)
-             vol_val = r.get("vol_value", 0)
-             ratio = r.get("oi_vol_ratio", 0)
-
-             # 校对显示：格式 OI: 1.2亿 / Vol: 2.4亿 = 0.50
+             oi_val, vol_val, ratio = r.get("oi_value", 0), r.get("vol_value", 0), r.get("oi_vol_ratio", 0)
              comp_str = f"OI:`{format_number(oi_val)}` / Vol:`{format_number(vol_val)}` = **`{ratio:.2f}`**"
 
-             # OI 24h 异动符号
-             oi_change = r.get("oi_change_24h_pct", 0)
-             oi_trend = f" (OI {oi_change:+.1f}%)" if abs(oi_change) > 5 else ""
-
-             # 分离名称与链接
              display_sym = sym.replace("USDT", "")
              name_copyable = f"`{display_sym}`"
              link_icon = f"[🔗](https://www.coinglass.com/tv/zh/Binance_{sym})"
 
-             # --- 核心动量分析 ---
              hist_item = history.get(sym, {})
              chain = hist_item.get("rank_chain", [])
-             if not chain:
-                 trend_raw = "🆕"
+             if not chain: trend_raw = "🆕"
              else:
                  prev_rank = chain[-1]
                  diff = prev_rank - (i + 1)
@@ -328,20 +315,28 @@ def notify_feishu(valid_results, bj_time, history, all_results_dict):
              sticky_count = hist_item.get("on_board_count", 0)
              sticky_str = f" 🔥`{sticky_count}h`" if sticky_count > 1 else ""
 
-             # BBW 细微变化
              last_bbw = hist_item.get("last_bbw", curr_bbw)
              bbw_icon = "💠" if curr_bbw < last_bbw else "⚠️" if curr_bbw > last_bbw else "➖"
              bbw_str = f'BBW {curr_bbw * 100:.2f}%({bbw_icon})'
 
              medal = "🥇" if i == 0 else "🥈" if i == 1 else "🥉" if i == 2 else f" {i+1}."
+             md_lines.append(f"{medal} **{name_copyable}** {link_icon} {trend_raw}{sticky_str} | ⏳**{dur}**根")
+             md_lines.append(f"└ 📊 {comp_str} | {bbw_str} | {price}")
 
-             # 排版：第一行 Symbol + 趋势；第二行 缩圈+BBW；第三行 核心校对数据
-             md_lines.append(f"{medal} **{name_copyable}** {link_icon} {trend_raw}{sticky_str}")
-             md_lines.append(f"└ ⏳**{dur}**根 | {bbw_str}{oi_trend}")
-             md_lines.append(f"└ 📊 {comp_str} | {price}\n")
+         # --- 第二阶段：全量/精选名称索引 (按名称排序) ---
+         md_lines.append("\n🔠 **【索引: 全部在榜标的 (按名称排序)】**")
+         name_results = sorted(valid_results, key=lambda x: x["symbol"])
 
-         if len(valid_results) > 25:
-             md_lines.append(f"\n*(共有 {len(valid_results)} 个币满足条件，这里仅展示前25名)*")
+         index_lines = []
+         for r in name_results[:20]: # 索引最多放 20 个，防止消息过长
+             sym_short = r["symbol"].replace("USDT", "")
+             dur = r["duration"]
+             index_lines.append(f"`{sym_short}`({dur}h)")
+
+         md_lines.append(" | ".join(index_lines))
+
+         if len(valid_results) > 20:
+             md_lines.append(f"\n*(共有 {len(valid_results)} 个币满足条件，完整列表见 Markdown 报告)*")
 
     # 爆发预警板块
     breakouts = detect_breakouts(valid_results, history, all_results_dict)
@@ -426,33 +421,36 @@ def main():
             r["vol_value"] = item.get("vol", 0)
             r["oi_vol_ratio"] = r["oi_value"] / r["vol_value"] if r["vol_value"] > 0 else 0
 
-        # 1. 首先按横盘时长 (duration) 降序排列，次要按 BBW (amplitude) 升序
+        # 1. 核心排序：按横盘时长 (duration) 降序，用于保存历史记忆和核心榜单
         valid_results.sort(key=lambda x: (-x["duration"], x["amplitude"]))
+        duration_results_sorted = valid_results[:]
 
-        # 2. 截取前 25 名（横盘最久的标的集）
-        top_candidates = valid_results[:25]
-
-        # 3. 对这最久的 25 个标的进行币种名升序排列 (用户最新精确需求)
-        top_candidates.sort(key=lambda x: x["symbol"])
-
-        # 4. 重新拼接结果，确保报告和推送的前 25 是时长最久且名称有序的
-        valid_results = top_candidates + valid_results[25:]
+        # 2. 辅助排序：按币种名升序，用于报告的字母索引
+        name_results_sorted = sorted(valid_results, key=lambda x: x["symbol"])
 
     # 归档 Markdown 报告
     history = load_history()
     report_path = "sideways_report.md"
     with open(report_path, "w", encoding="utf-8", errors="ignore") as f:
         f.write("# 📊 币安 USDT 永续合约【横盘爆发雷达】\n\n")
-        f.write(f"> **生成时间**: {bj_time.strftime('%Y-%m-%d %H:%M:%S')} | **排序规则**: 时长前25名按名称升序\n\n")
-        f.write("| 排名 | 合约标的 | OI/Vol | OI | Vol | 极致缩圈 | BBW | 24h OI% | TradingView |\n")
+        f.write(f"> **生成时间**: {bj_time.strftime('%Y-%m-%d %H:%M:%S')} | **排序规则**: 提供时长排行与名称索引\n\n")
+
+        f.write("## 🏆 横盘时长排行 (Duration Leaderboard)\n\n")
+        f.write("| 排名 | 合约标刻 | OI/Vol | OI | Vol | 极致缩圈 | BBW | 24h OI% | TradingView |\n")
         f.write("|---|---|---|---|---|---|---|---|---|\n")
-        for i, r in enumerate(valid_results):
+        for i, r in enumerate(duration_results_sorted):
             f.write(f"| {i+1} | **{r['symbol']}** | **{r.get('oi_vol_ratio',0):.2f}** | {format_number(r.get('oi_value',0))} | {format_number(r.get('vol_value',0))} | {r['duration']} 根 | {r['amplitude']*100:.2f}% | {r.get('oi_change_24h_pct',0):+.1f}% | [直达](https://www.coinglass.com/tv/zh/Binance_{r['symbol']}) |\n")
+
+        f.write("\n## 🔠 币种名称索引 (Alphabetical Index)\n\n")
+        f.write("| 合约标的 | 横盘时长 | BBW | OI/Vol | OI | Vol |\n")
+        f.write("|---|---|---|---|---|---|\n")
+        for r in name_results_sorted:
+            f.write(f"| **{r['symbol']}** | {r['duration']} 根 | {r['amplitude']*100:.2f}% | {r.get('oi_vol_ratio',0):.2f} | {format_number(r.get('oi_value',0))} | {format_number(r.get('vol_value',0))} |\n")
 
     # 推送飞书
     all_prices_map = {r["symbol"]: r["price"] for r in results}
     notify_feishu(valid_results, bj_time, history, all_prices_map)
-    save_history(valid_results, history)
+    save_history(duration_results_sorted, history)
 
 if __name__ == "__main__":
     main()

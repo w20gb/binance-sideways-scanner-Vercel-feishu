@@ -1,0 +1,3313 @@
+[
+  {
+    "timestamp": "2026-03-24 00:06:38",
+    "contract_symbol": "BUSDT",
+    "display_name": "B",
+    "board_type": "secondary",
+    "on_board_count": 42,
+    "last_bbw": 0.05089232085116821,
+    "last_price": 0.2089,
+    "last_ratio": 7.05978401591676,
+    "rank_chain": [
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "timestamp": "2026-03-24 00:06:38",
+    "contract_symbol": "TAGUSDT",
+    "display_name": "TAG",
+    "board_type": "secondary",
+    "on_board_count": 29,
+    "last_bbw": 0.059642217406946,
+    "last_price": 0.0005593,
+    "last_ratio": 4.504228027337697,
+    "rank_chain": [
+      8,
+      8,
+      8,
+      8,
+      8
+    ]
+  },
+  {
+    "timestamp": "2026-03-24 00:06:38",
+    "contract_symbol": "MOCAUSDT",
+    "display_name": "MOCA",
+    "board_type": "secondary",
+    "on_board_count": 6,
+    "last_bbw": 0.050514077830474666,
+    "last_price": 0.01373,
+    "last_ratio": 0.9945026710638462,
+    "rank_chain": [
+      15,
+      15,
+      15,
+      15,
+      15
+    ]
+  },
+  {
+    "timestamp": "2026-03-24 00:06:38",
+    "contract_symbol": "GMTUSDT",
+    "display_name": "GMT",
+    "board_type": "primary",
+    "on_board_count": 5,
+    "last_bbw": 0.0504172308536757,
+    "last_price": 0.01055,
+    "last_ratio": 0.48285957378644634,
+    "rank_chain": [
+      16,
+      16,
+      16,
+      16,
+      16
+    ]
+  },
+  {
+    "timestamp": "2026-03-24 00:06:38",
+    "contract_symbol": "XVSUSDT",
+    "display_name": "XVS",
+    "board_type": "primary",
+    "on_board_count": 5,
+    "last_bbw": 0.04830193710060679,
+    "last_price": 2.79,
+    "last_ratio": 1.1272293292479805,
+    "rank_chain": [
+      25,
+      25,
+      25,
+      23,
+      24
+    ]
+  },
+  {
+    "timestamp": "2026-03-24 00:06:38",
+    "contract_symbol": "CELOUSDT",
+    "display_name": "CELO",
+    "board_type": "primary",
+    "on_board_count": 5,
+    "last_bbw": 0.04956471040428473,
+    "last_price": 0.08,
+    "last_ratio": 0.508489027567774,
+    "rank_chain": [
+      24,
+      24,
+      23,
+      25,
+      25
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 23:56:03",
+    "contract_symbol": "SEIUSDT",
+    "display_name": "SEI",
+    "board_type": "primary",
+    "on_board_count": 4,
+    "last_bbw": 0.047158925857152534,
+    "last_price": 0.0602,
+    "last_ratio": 0.7691059556861934,
+    "rank_chain": [
+      23,
+      23,
+      24,
+      24
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 23:10:12",
+    "contract_symbol": "AUCTIONUSDT",
+    "display_name": "AUCTION",
+    "board_type": "primary",
+    "on_board_count": 48,
+    "last_bbw": 0.05726069612832271,
+    "last_price": 4.89,
+    "last_ratio": 1.3123811265636194,
+    "rank_chain": [
+      7,
+      6,
+      7,
+      7,
+      7
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 23:10:12",
+    "contract_symbol": "LAYERUSDT",
+    "display_name": "LAYER",
+    "board_type": "primary",
+    "on_board_count": 48,
+    "last_bbw": 0.05025850931960913,
+    "last_price": 0.0854,
+    "last_ratio": 0.6256705750436907,
+    "rank_chain": [
+      8,
+      8,
+      8,
+      8,
+      8
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 23:10:12",
+    "contract_symbol": "HOMEUSDT",
+    "display_name": "HOME",
+    "board_type": "primary",
+    "on_board_count": 48,
+    "last_bbw": 0.0630870932772603,
+    "last_price": 0.02255,
+    "last_ratio": 3.310267978833929,
+    "rank_chain": [
+      9,
+      9,
+      9,
+      9,
+      9
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 23:10:12",
+    "contract_symbol": "MLNUSDT",
+    "display_name": "MLN",
+    "board_type": "primary",
+    "on_board_count": 8,
+    "last_bbw": 0.055298534623040456,
+    "last_price": 3.39,
+    "last_ratio": 1.564122596623113,
+    "rank_chain": [
+      13,
+      13,
+      13,
+      12,
+      12
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 23:10:12",
+    "contract_symbol": "IDUSDT",
+    "display_name": "ID",
+    "board_type": "primary",
+    "on_board_count": 5,
+    "last_bbw": 0.052941097510661755,
+    "last_price": 0.0397,
+    "last_ratio": 0.816394979251836,
+    "rank_chain": [
+      19,
+      19,
+      19,
+      19,
+      16
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 23:10:12",
+    "contract_symbol": "NEWTUSDT",
+    "display_name": "NEWT",
+    "board_type": "primary",
+    "on_board_count": 5,
+    "last_bbw": 0.05357728209187745,
+    "last_price": 0.0696,
+    "last_ratio": 1.0169248069625914,
+    "rank_chain": [
+      18,
+      18,
+      17,
+      17,
+      17
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 23:10:12",
+    "contract_symbol": "NXPCUSDT",
+    "display_name": "NXPC",
+    "board_type": "primary",
+    "on_board_count": 5,
+    "last_bbw": 0.052886730546450954,
+    "last_price": 0.3037,
+    "last_ratio": 1.4275384067584183,
+    "rank_chain": [
+      21,
+      21,
+      21,
+      21,
+      19
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 23:10:12",
+    "contract_symbol": "MOVRUSDT",
+    "display_name": "MOVR",
+    "board_type": "primary",
+    "on_board_count": 5,
+    "last_bbw": 0.05075551296189373,
+    "last_price": 1.143,
+    "last_ratio": 0.8012973979931699,
+    "rank_chain": [
+      22,
+      22,
+      22,
+      22,
+      20
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 23:10:12",
+    "contract_symbol": "CYBERUSDT",
+    "display_name": "CYBER",
+    "board_type": "primary",
+    "on_board_count": 5,
+    "last_bbw": 0.055114894981723485,
+    "last_price": 0.535,
+    "last_ratio": 0.9767494626754449,
+    "rank_chain": [
+      23,
+      23,
+      23,
+      23,
+      21
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 22:57:10",
+    "contract_symbol": "TRUSTUSDT",
+    "display_name": "TRUST",
+    "board_type": "secondary",
+    "on_board_count": 47,
+    "last_bbw": 0.054032125579879714,
+    "last_price": 0.06758,
+    "last_ratio": 0.637174098144391,
+    "rank_chain": [
+      15,
+      13,
+      13,
+      13,
+      13
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 22:57:10",
+    "contract_symbol": "SOONUSDT",
+    "display_name": "SOON",
+    "board_type": "secondary",
+    "on_board_count": 36,
+    "last_bbw": 0.05290033703207129,
+    "last_price": 0.1272,
+    "last_ratio": 1.6325602389032297,
+    "rank_chain": [
+      12,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 22:57:10",
+    "contract_symbol": "ZKPUSDT",
+    "display_name": "ZKP",
+    "board_type": "primary",
+    "on_board_count": 10,
+    "last_bbw": 0.05494123673406861,
+    "last_price": 0.0754,
+    "last_ratio": 0.8822696686435588,
+    "rank_chain": [
+      3,
+      3,
+      3,
+      3,
+      3
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 22:57:10",
+    "contract_symbol": "TRBUSDT",
+    "display_name": "TRB",
+    "board_type": "primary",
+    "on_board_count": 7,
+    "last_bbw": 0.05457026609635387,
+    "last_price": 15.91,
+    "last_ratio": 0.5904201032146399,
+    "rank_chain": [
+      21,
+      15,
+      15,
+      15,
+      15
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 22:57:10",
+    "contract_symbol": "TAIKOUSDT",
+    "display_name": "TAIKO",
+    "board_type": "secondary",
+    "on_board_count": 7,
+    "last_bbw": 0.052083556963384674,
+    "last_price": 0.1253,
+    "last_ratio": 1.3828243300513718,
+    "rank_chain": [
+      23,
+      17,
+      17,
+      17,
+      17
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 22:57:10",
+    "contract_symbol": "ETHWUSDT",
+    "display_name": "ETHW",
+    "board_type": "secondary",
+    "on_board_count": 7,
+    "last_bbw": 0.04806416175629424,
+    "last_price": 0.2803,
+    "last_ratio": 0.9435511129365157,
+    "rank_chain": [
+      25,
+      18,
+      18,
+      18,
+      18
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 22:57:10",
+    "contract_symbol": "SOMIUSDT",
+    "display_name": "SOMI",
+    "board_type": "primary",
+    "on_board_count": 4,
+    "last_bbw": 0.05263536503468842,
+    "last_price": 0.1693,
+    "last_ratio": 0.7655914195043448,
+    "rank_chain": [
+      17,
+      17,
+      18,
+      18
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 22:57:10",
+    "contract_symbol": "ORCAUSDT",
+    "display_name": "ORCA",
+    "board_type": "primary",
+    "on_board_count": 4,
+    "last_bbw": 0.052621069978146626,
+    "last_price": 0.933,
+    "last_ratio": 0.8898339186854826,
+    "rank_chain": [
+      24,
+      24,
+      24,
+      24
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 22:57:10",
+    "contract_symbol": "BSVUSDT",
+    "display_name": "BSV",
+    "board_type": "secondary",
+    "on_board_count": 4,
+    "last_bbw": 0.05021523953555369,
+    "last_price": 14.35,
+    "last_ratio": 1.0648648819825997,
+    "rank_chain": [
+      20,
+      20,
+      20,
+      20
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 22:57:10",
+    "contract_symbol": "INTCUSDT",
+    "display_name": "INTC",
+    "board_type": "secondary",
+    "on_board_count": 4,
+    "last_bbw": 0.054229976425908336,
+    "last_price": 45.3,
+    "last_ratio": 0.09391614404297699,
+    "rank_chain": [
+      23,
+      23,
+      23,
+      23
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 22:57:10",
+    "contract_symbol": "HIPPOUSDT",
+    "display_name": "HIPPO",
+    "board_type": "secondary",
+    "on_board_count": 4,
+    "last_bbw": 0.05535004145633231,
+    "last_price": 0.0005693,
+    "last_ratio": 0.9654381790340364,
+    "rank_chain": [
+      25,
+      25,
+      25,
+      25
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 22:09:06",
+    "contract_symbol": "ZAMAUSDT",
+    "display_name": "ZAMA",
+    "board_type": "primary",
+    "on_board_count": 43,
+    "last_bbw": 0.057111062584634574,
+    "last_price": 0.02319,
+    "last_ratio": 1.832941745885878,
+    "rank_chain": [
+      5,
+      5,
+      4,
+      4,
+      4
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 22:09:06",
+    "contract_symbol": "TNSRUSDT",
+    "display_name": "TNSR",
+    "board_type": "primary",
+    "on_board_count": 43,
+    "last_bbw": 0.05154360441200478,
+    "last_price": 0.0423,
+    "last_ratio": 0.762693253000957,
+    "rank_chain": [
+      17,
+      18,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 22:09:06",
+    "contract_symbol": "CATIUSDT",
+    "display_name": "CATI",
+    "board_type": "primary",
+    "on_board_count": 42,
+    "last_bbw": 0.0632575888161556,
+    "last_price": 0.0433,
+    "last_ratio": 2.646446127711679,
+    "rank_chain": [
+      14,
+      14,
+      9,
+      7,
+      9
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 22:09:06",
+    "contract_symbol": "NEIROUSDT",
+    "display_name": "NEIRO",
+    "board_type": "primary",
+    "on_board_count": 32,
+    "last_bbw": 0.0604133700213826,
+    "last_price": 6.384e-05,
+    "last_ratio": 0.3025453469192806,
+    "rank_chain": [
+      22,
+      22,
+      14,
+      14,
+      14
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 22:09:06",
+    "contract_symbol": "PUFFERUSDT",
+    "display_name": "PUFFER",
+    "board_type": "secondary",
+    "on_board_count": 32,
+    "last_bbw": 0.051247618457501844,
+    "last_price": 0.03019,
+    "last_ratio": 1.2648562146216402,
+    "rank_chain": [
+      17,
+      17,
+      16,
+      16,
+      16
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 22:09:06",
+    "contract_symbol": "MMTUSDT",
+    "display_name": "MMT",
+    "board_type": "primary",
+    "on_board_count": 25,
+    "last_bbw": 0.05274419255932614,
+    "last_price": 0.1133,
+    "last_ratio": 0.987140997741625,
+    "rank_chain": [
+      20,
+      20,
+      12,
+      12,
+      12
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 22:09:06",
+    "contract_symbol": "INUSDT",
+    "display_name": "IN",
+    "board_type": "secondary",
+    "on_board_count": 23,
+    "last_bbw": 0.052650987093197564,
+    "last_price": 0.06027,
+    "last_ratio": 1.0376566979149828,
+    "rank_chain": [
+      9,
+      9,
+      9,
+      9,
+      9
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 22:09:06",
+    "contract_symbol": "GOATUSDT",
+    "display_name": "GOAT",
+    "board_type": "secondary",
+    "on_board_count": 23,
+    "last_bbw": 0.05091478570057485,
+    "last_price": 0.017378,
+    "last_ratio": 1.1040313997973987,
+    "rank_chain": [
+      14,
+      14,
+      14,
+      14,
+      14
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 22:09:06",
+    "contract_symbol": "SYNUSDT",
+    "display_name": "SYN",
+    "board_type": "primary",
+    "on_board_count": 15,
+    "last_bbw": 0.05873208797026778,
+    "last_price": 0.0487,
+    "last_ratio": 1.1579897776667245,
+    "rank_chain": [
+      24,
+      24,
+      15,
+      15,
+      15
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 22:09:06",
+    "contract_symbol": "DOODUSDT",
+    "display_name": "DOOD",
+    "board_type": "secondary",
+    "on_board_count": 15,
+    "last_bbw": 0.06089369145360065,
+    "last_price": 0.003245,
+    "last_ratio": 0.7132009437520129,
+    "rank_chain": [
+      25,
+      25,
+      20,
+      20,
+      20
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 22:09:06",
+    "contract_symbol": "AGLDUSDT",
+    "display_name": "AGLD",
+    "board_type": "primary",
+    "on_board_count": 3,
+    "last_bbw": 0.05584260864958397,
+    "last_price": 0.241,
+    "last_ratio": 0.6760262878456214,
+    "rank_chain": [
+      17,
+      17,
+      17
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 22:09:06",
+    "contract_symbol": "MIRAUSDT",
+    "display_name": "MIRA",
+    "board_type": "primary",
+    "on_board_count": 3,
+    "last_bbw": 0.05669909044553075,
+    "last_price": 0.0803,
+    "last_ratio": 0.7395254330783476,
+    "rank_chain": [
+      20,
+      19,
+      20
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 22:09:06",
+    "contract_symbol": "XAIUSDT",
+    "display_name": "XAI",
+    "board_type": "primary",
+    "on_board_count": 3,
+    "last_bbw": 0.05309937128908753,
+    "last_price": 0.01037,
+    "last_ratio": 0.6954360585663362,
+    "rank_chain": [
+      25,
+      25,
+      25
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 22:09:06",
+    "contract_symbol": "CLANKERUSDT",
+    "display_name": "CLANKER",
+    "board_type": "secondary",
+    "on_board_count": 3,
+    "last_bbw": 0.0626126755004889,
+    "last_price": 27.15,
+    "last_ratio": 0.9176084727637749,
+    "rank_chain": [
+      21,
+      21,
+      21
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 22:09:06",
+    "contract_symbol": "INXUSDT",
+    "display_name": "INX",
+    "board_type": "secondary",
+    "on_board_count": 3,
+    "last_bbw": 0.05087733084977476,
+    "last_price": 0.01165,
+    "last_ratio": 0.8305828996748431,
+    "rank_chain": [
+      22,
+      22,
+      22
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 22:09:06",
+    "contract_symbol": "HYPEUSDT",
+    "display_name": "HYPE",
+    "board_type": "secondary",
+    "on_board_count": 3,
+    "last_bbw": 0.04949120490559559,
+    "last_price": 38.852,
+    "last_ratio": 0.4287877278200393,
+    "rank_chain": [
+      24,
+      24,
+      24
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 21:14:39",
+    "contract_symbol": "INITUSDT",
+    "display_name": "INIT",
+    "board_type": "primary",
+    "on_board_count": 40,
+    "last_bbw": 0.05248849473616615,
+    "last_price": 0.079,
+    "last_ratio": 0.7221430064109506,
+    "rank_chain": [
+      7,
+      6,
+      7,
+      8,
+      8
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 21:14:39",
+    "contract_symbol": "SOPHUSDT",
+    "display_name": "SOPH",
+    "board_type": "primary",
+    "on_board_count": 40,
+    "last_bbw": 0.05416994234547334,
+    "last_price": 0.00947,
+    "last_ratio": 1.2563112228063085,
+    "rank_chain": [
+      13,
+      13,
+      15,
+      15,
+      15
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 21:14:39",
+    "contract_symbol": "MOODENGUSDT",
+    "display_name": "MOODENG",
+    "board_type": "secondary",
+    "on_board_count": 29,
+    "last_bbw": 0.05693067404178889,
+    "last_price": 0.04925,
+    "last_ratio": 0.3956452020506479,
+    "rank_chain": [
+      14,
+      15,
+      15,
+      15,
+      15
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 21:14:39",
+    "contract_symbol": "ACUUSDT",
+    "display_name": "ACU",
+    "board_type": "secondary",
+    "on_board_count": 29,
+    "last_bbw": 0.052600053436574125,
+    "last_price": 0.08648,
+    "last_ratio": 0.9218770093815357,
+    "rank_chain": [
+      19,
+      20,
+      20,
+      21,
+      21
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 21:14:39",
+    "contract_symbol": "MELANIAUSDT",
+    "display_name": "MELANIA",
+    "board_type": "secondary",
+    "on_board_count": 29,
+    "last_bbw": 0.055496037925347685,
+    "last_price": 0.11929,
+    "last_ratio": 0.8993406098849818,
+    "rank_chain": [
+      22,
+      23,
+      23,
+      23,
+      23
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 21:14:39",
+    "contract_symbol": "XPLUSDT",
+    "display_name": "XPL",
+    "board_type": "primary",
+    "on_board_count": 25,
+    "last_bbw": 0.05644253688090388,
+    "last_price": 0.0953,
+    "last_ratio": 0.875042151170287,
+    "rank_chain": [
+      6,
+      7,
+      8,
+      7,
+      7
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 21:14:39",
+    "contract_symbol": "SAGAUSDT",
+    "display_name": "SAGA",
+    "board_type": "primary",
+    "on_board_count": 22,
+    "last_bbw": 0.05708355851308634,
+    "last_price": 0.0306,
+    "last_ratio": 1.2880731972666901,
+    "rank_chain": [
+      10,
+      10,
+      11,
+      12,
+      11
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 21:14:39",
+    "contract_symbol": "VELODROMEUSDT",
+    "display_name": "VELODROME",
+    "board_type": "primary",
+    "on_board_count": 22,
+    "last_bbw": 0.055161117499705946,
+    "last_price": 0.01439,
+    "last_ratio": 3.6795048796955463,
+    "rank_chain": [
+      15,
+      15,
+      16,
+      16,
+      16
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 21:14:39",
+    "contract_symbol": "ACTUSDT",
+    "display_name": "ACT",
+    "board_type": "primary",
+    "on_board_count": 15,
+    "last_bbw": 0.06079307914864084,
+    "last_price": 0.014,
+    "last_ratio": 1.0440658638975937,
+    "rank_chain": [
+      9,
+      9,
+      10,
+      10,
+      10
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 21:14:39",
+    "contract_symbol": "OGNUSDT",
+    "display_name": "OGN",
+    "board_type": "primary",
+    "on_board_count": 15,
+    "last_bbw": 0.04951322318203605,
+    "last_price": 0.02339,
+    "last_ratio": 0.6886416596347954,
+    "rank_chain": [
+      22,
+      22,
+      23,
+      23,
+      23
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 21:14:39",
+    "contract_symbol": "EWJUSDT",
+    "display_name": "EWJ",
+    "board_type": "secondary",
+    "on_board_count": 12,
+    "last_bbw": 0.05505816083185874,
+    "last_price": 84.03,
+    "last_ratio": 0.14816054999700454,
+    "rank_chain": [
+      23,
+      24,
+      24,
+      24,
+      24
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 21:14:39",
+    "contract_symbol": "ZORAUSDT",
+    "display_name": "ZORA",
+    "board_type": "secondary",
+    "on_board_count": 9,
+    "last_bbw": 0.04947775274314743,
+    "last_price": 0.0163,
+    "last_ratio": 1.089436831184468,
+    "rank_chain": [
+      20,
+      21,
+      21,
+      20,
+      20
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 21:14:39",
+    "contract_symbol": "YBUSDT",
+    "display_name": "YB",
+    "board_type": "primary",
+    "on_board_count": 5,
+    "last_bbw": 0.05120268382232051,
+    "last_price": 0.1167,
+    "last_ratio": 0.8612168912408769,
+    "rank_chain": [
+      3,
+      3,
+      4,
+      4,
+      4
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 21:14:39",
+    "contract_symbol": "HFTUSDT",
+    "display_name": "HFT",
+    "board_type": "primary",
+    "on_board_count": 5,
+    "last_bbw": 0.05109053314332975,
+    "last_price": 0.0136,
+    "last_ratio": 0.7684185714985223,
+    "rank_chain": [
+      16,
+      17,
+      17,
+      18,
+      19
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 20:11:49",
+    "contract_symbol": "STORJUSDT",
+    "display_name": "STORJ",
+    "board_type": "primary",
+    "on_board_count": 6,
+    "last_bbw": 0.04342431712065745,
+    "last_price": 0.0978,
+    "last_ratio": 0.8775219692706521,
+    "rank_chain": [
+      25,
+      25,
+      25,
+      25,
+      25
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 19:30:38",
+    "contract_symbol": "SONICUSDT",
+    "display_name": "SONIC",
+    "board_type": "secondary",
+    "on_board_count": 10,
+    "last_bbw": 0.04849599273797875,
+    "last_price": 0.0407,
+    "last_ratio": 1.9259363906603635,
+    "rank_chain": [
+      10,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 19:30:38",
+    "contract_symbol": "MAVUSDT",
+    "display_name": "MAV",
+    "board_type": "primary",
+    "on_board_count": 7,
+    "last_bbw": 0.048255780165026664,
+    "last_price": 0.01334,
+    "last_ratio": 1.2230590612778947,
+    "rank_chain": [
+      24,
+      24,
+      24,
+      23,
+      22
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 19:11:02",
+    "contract_symbol": "ENSOUSDT",
+    "display_name": "ENSO",
+    "board_type": "primary",
+    "on_board_count": 23,
+    "last_bbw": 0.05290871211916555,
+    "last_price": 1.108,
+    "last_ratio": 0.6566186649812693,
+    "rank_chain": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 18:13:56",
+    "contract_symbol": "KERNELUSDT",
+    "display_name": "KERNEL",
+    "board_type": "primary",
+    "on_board_count": 20,
+    "last_bbw": 0.05286851602420955,
+    "last_price": 0.0926,
+    "last_ratio": 0.9553866916678927,
+    "rank_chain": [
+      9,
+      9,
+      9,
+      9,
+      10
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 18:13:56",
+    "contract_symbol": "FARTCOINUSDT",
+    "display_name": "FARTCOIN",
+    "board_type": "secondary",
+    "on_board_count": 20,
+    "last_bbw": 0.052691771497661404,
+    "last_price": 0.18064,
+    "last_ratio": 0.39939391257872536,
+    "rank_chain": [
+      13,
+      13,
+      10,
+      11,
+      11
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 18:13:56",
+    "contract_symbol": "ELSAUSDT",
+    "display_name": "ELSA",
+    "board_type": "secondary",
+    "on_board_count": 8,
+    "last_bbw": 0.0542005162396887,
+    "last_price": 0.06458,
+    "last_ratio": 0.7371141723244178,
+    "rank_chain": [
+      21,
+      21,
+      19,
+      19,
+      19
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 17:08:08",
+    "contract_symbol": "BIOUSDT",
+    "display_name": "BIO",
+    "board_type": "primary",
+    "on_board_count": 17,
+    "last_bbw": 0.051535850965899924,
+    "last_price": 0.0181,
+    "last_ratio": 0.7734226428482931,
+    "rank_chain": [
+      13,
+      12,
+      14,
+      12,
+      12
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 17:08:08",
+    "contract_symbol": "ALCHUSDT",
+    "display_name": "ALCH",
+    "board_type": "secondary",
+    "on_board_count": 17,
+    "last_bbw": 0.049061259641885714,
+    "last_price": 0.07567,
+    "last_ratio": 6.8560049866847494,
+    "rank_chain": [
+      5,
+      5,
+      5,
+      5,
+      5
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 17:08:08",
+    "contract_symbol": "SKYAIUSDT",
+    "display_name": "SKYAI",
+    "board_type": "secondary",
+    "on_board_count": 13,
+    "last_bbw": 0.050551806781393066,
+    "last_price": 0.04909,
+    "last_ratio": 4.37488182013132,
+    "rank_chain": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 17:08:08",
+    "contract_symbol": "CHRUSDT",
+    "display_name": "CHR",
+    "board_type": "primary",
+    "on_board_count": 5,
+    "last_bbw": 0.045440572951979535,
+    "last_price": 0.0135,
+    "last_ratio": 0.7151555086810585,
+    "rank_chain": [
+      16,
+      16,
+      13,
+      18,
+      17
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 15:59:51",
+    "contract_symbol": "EWJUSDT",
+    "display_name": "EWJ",
+    "board_type": "secondary",
+    "on_board_count": 16,
+    "last_bbw": 0.04402408021408869,
+    "last_price": 79.64,
+    "last_ratio": 0.28083615301470805,
+    "rank_chain": [
+      24,
+      24,
+      24,
+      24,
+      25
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 15:59:51",
+    "contract_symbol": "BERAUSDT",
+    "display_name": "BERA",
+    "board_type": "primary",
+    "on_board_count": 14,
+    "last_bbw": 0.05186323267510342,
+    "last_price": 0.508,
+    "last_ratio": 1.4004801977790626,
+    "rank_chain": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 15:59:51",
+    "contract_symbol": "STGUSDT",
+    "display_name": "STG",
+    "board_type": "primary",
+    "on_board_count": 14,
+    "last_bbw": 0.05189885445464823,
+    "last_price": 0.1808,
+    "last_ratio": 2.5779972340466433,
+    "rank_chain": [
+      5,
+      5,
+      5,
+      5,
+      5
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 15:59:51",
+    "contract_symbol": "IDOLUSDT",
+    "display_name": "IDOL",
+    "board_type": "secondary",
+    "on_board_count": 14,
+    "last_bbw": 0.05416509266931991,
+    "last_price": 0.023631,
+    "last_ratio": 3.546994847832143,
+    "rank_chain": [
+      8,
+      8,
+      8,
+      9,
+      9
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 15:37:40",
+    "contract_symbol": "DOODUSDT",
+    "display_name": "DOOD",
+    "board_type": "secondary",
+    "on_board_count": 13,
+    "last_bbw": 0.03434013840835806,
+    "last_price": 0.003071,
+    "last_ratio": 0.815492248194883,
+    "rank_chain": [
+      24,
+      25,
+      25,
+      25,
+      25
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 15:14:52",
+    "contract_symbol": "MOCAUSDT",
+    "display_name": "MOCA",
+    "board_type": "secondary",
+    "on_board_count": 12,
+    "last_bbw": 0.0506884960532434,
+    "last_price": 0.01335,
+    "last_ratio": 1.1340532824476908,
+    "rank_chain": [
+      17,
+      17,
+      19,
+      19,
+      19
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 15:14:52",
+    "contract_symbol": "TAGUSDT",
+    "display_name": "TAG",
+    "board_type": "secondary",
+    "on_board_count": 5,
+    "last_bbw": 0.05091712233710558,
+    "last_price": 0.0005779,
+    "last_ratio": 5.2437412378840165,
+    "rank_chain": [
+      9,
+      9,
+      9,
+      9,
+      9
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 14:50:53",
+    "contract_symbol": "ASRUSDT",
+    "display_name": "ASR",
+    "board_type": "primary",
+    "on_board_count": 2,
+    "last_bbw": 0.024544301540218274,
+    "last_price": 1.211,
+    "last_ratio": 2.282279381674643,
+    "rank_chain": [
+      7,
+      7
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 14:03:19",
+    "contract_symbol": "UBUSDT",
+    "display_name": "UB",
+    "board_type": "secondary",
+    "on_board_count": 20,
+    "last_bbw": 0.05041365983268817,
+    "last_price": 0.03256,
+    "last_ratio": 2.9411528331449293,
+    "rank_chain": [
+      19,
+      19,
+      19,
+      19,
+      19
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 14:03:19",
+    "contract_symbol": "CLANKERUSDT",
+    "display_name": "CLANKER",
+    "board_type": "secondary",
+    "on_board_count": 9,
+    "last_bbw": 0.017357960947604372,
+    "last_price": 25.84,
+    "last_ratio": 1.4166030270888736,
+    "rank_chain": [
+      25,
+      25,
+      25,
+      25,
+      25
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 13:37:53",
+    "contract_symbol": "HFTUSDT",
+    "display_name": "HFT",
+    "board_type": "primary",
+    "on_board_count": 2,
+    "last_bbw": 0.03861475844773722,
+    "last_price": 0.0132,
+    "last_ratio": 0.805623688866226,
+    "rank_chain": [
+      18,
+      20
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 13:12:32",
+    "contract_symbol": "SYNUSDT",
+    "display_name": "SYN",
+    "board_type": "primary",
+    "on_board_count": 18,
+    "last_bbw": 0.028490515182732462,
+    "last_price": 0.0468,
+    "last_ratio": 1.3626131122032716,
+    "rank_chain": [
+      23,
+      24,
+      25,
+      24,
+      25
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 13:12:32",
+    "contract_symbol": "ESPORTSUSDT",
+    "display_name": "ESPORTS",
+    "board_type": "secondary",
+    "on_board_count": 9,
+    "last_bbw": 0.05252421330831194,
+    "last_price": 0.27531,
+    "last_ratio": 1.9831068072361977,
+    "rank_chain": [
+      7,
+      7,
+      9,
+      9,
+      9
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 13:12:32",
+    "contract_symbol": "OGNUSDT",
+    "display_name": "OGN",
+    "board_type": "primary",
+    "on_board_count": 7,
+    "last_bbw": 0.023215380937663673,
+    "last_price": 0.02264,
+    "last_ratio": 0.8056512607696237,
+    "rank_chain": [
+      22,
+      22,
+      23,
+      22,
+      23
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 13:12:32",
+    "contract_symbol": "LAUSDT",
+    "display_name": "LA",
+    "board_type": "primary",
+    "on_board_count": 7,
+    "last_bbw": 0.050100016083186885,
+    "last_price": 0.2092,
+    "last_ratio": 0.5696713880927596,
+    "rank_chain": [
+      24,
+      23,
+      24,
+      23,
+      24
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 13:12:32",
+    "contract_symbol": "VELVETUSDT",
+    "display_name": "VELVET",
+    "board_type": "secondary",
+    "on_board_count": 7,
+    "last_bbw": 0.051479204983844375,
+    "last_price": 0.07448,
+    "last_ratio": 2.2973093212967255,
+    "rank_chain": [
+      6,
+      6,
+      8,
+      8,
+      8
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 12:28:36",
+    "contract_symbol": "HFTUSDT",
+    "display_name": "HFT",
+    "board_type": "primary",
+    "on_board_count": 5,
+    "last_bbw": 0.041265300142160476,
+    "last_price": 0.0131,
+    "last_ratio": 0.7736200945986597,
+    "rank_chain": [
+      18,
+      17,
+      17,
+      18,
+      19
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 12:06:43",
+    "contract_symbol": "STABLEUSDT",
+    "display_name": "STABLE",
+    "board_type": "secondary",
+    "on_board_count": 15,
+    "last_bbw": 0.02916001809451933,
+    "last_price": 0.02561,
+    "last_ratio": 2.316761682525055,
+    "rank_chain": [
+      13,
+      25,
+      25,
+      25,
+      25
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 12:06:43",
+    "contract_symbol": "VINEUSDT",
+    "display_name": "VINE",
+    "board_type": "secondary",
+    "on_board_count": 4,
+    "last_bbw": 0.05149140341904933,
+    "last_price": 0.0159,
+    "last_ratio": 1.026655957601968,
+    "rank_chain": [
+      10,
+      10,
+      10,
+      10
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 12:06:43",
+    "contract_symbol": "STORJUSDT",
+    "display_name": "STORJ",
+    "board_type": "primary",
+    "on_board_count": 3,
+    "last_bbw": 0.03052953022883794,
+    "last_price": 0.0961,
+    "last_ratio": 1.4484779247598736,
+    "rank_chain": [
+      25,
+      25,
+      25
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 11:00:24",
+    "contract_symbol": "KAITOUSDT",
+    "display_name": "KAITO",
+    "board_type": "primary",
+    "on_board_count": 12,
+    "last_bbw": 0.05375591404271226,
+    "last_price": 0.3737,
+    "last_ratio": 2.602367995543952,
+    "rank_chain": [
+      6,
+      6,
+      6,
+      5,
+      11
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 10:37:18",
+    "contract_symbol": "ALICEUSDT",
+    "display_name": "ALICE",
+    "board_type": "primary",
+    "on_board_count": 11,
+    "last_bbw": 0.04147395232696965,
+    "last_price": 0.1165,
+    "last_ratio": 0.37370882297345315,
+    "rank_chain": [
+      11,
+      9,
+      9,
+      7,
+      9
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 10:37:18",
+    "contract_symbol": "DENTUSDT",
+    "display_name": "DENT",
+    "board_type": "primary",
+    "on_board_count": 11,
+    "last_bbw": 0.02415789842608939,
+    "last_price": 0.000224,
+    "last_ratio": 0.427499519601572,
+    "rank_chain": [
+      14,
+      12,
+      12,
+      12,
+      10
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 10:37:18",
+    "contract_symbol": "NILUSDT",
+    "display_name": "NIL",
+    "board_type": "primary",
+    "on_board_count": 11,
+    "last_bbw": 0.03455204997025827,
+    "last_price": 0.0463,
+    "last_ratio": 1.738754283774423,
+    "rank_chain": [
+      17,
+      15,
+      14,
+      14,
+      13
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 10:37:18",
+    "contract_symbol": "DOGSUSDT",
+    "display_name": "DOGS",
+    "board_type": "primary",
+    "on_board_count": 11,
+    "last_bbw": 0.04454185564103508,
+    "last_price": 2.77e-05,
+    "last_ratio": 0.6145253230475695,
+    "rank_chain": [
+      20,
+      17,
+      16,
+      16,
+      15
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 10:37:18",
+    "contract_symbol": "AGLDUSDT",
+    "display_name": "AGLD",
+    "board_type": "primary",
+    "on_board_count": 11,
+    "last_bbw": 0.04635761589404061,
+    "last_price": 0.239,
+    "last_ratio": 0.4695445791793329,
+    "rank_chain": [
+      19,
+      18,
+      18,
+      17,
+      16
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 10:37:18",
+    "contract_symbol": "OPENUSDT",
+    "display_name": "OPEN",
+    "board_type": "primary",
+    "on_board_count": 11,
+    "last_bbw": 0.03655239424293406,
+    "last_price": 0.1506,
+    "last_ratio": 1.9075444878748122,
+    "rank_chain": [
+      22,
+      20,
+      19,
+      19,
+      18
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 10:37:18",
+    "contract_symbol": "SOLUSDT",
+    "display_name": "SOL",
+    "board_type": "primary",
+    "on_board_count": 11,
+    "last_bbw": 0.045136652875716506,
+    "last_price": 87.38,
+    "last_ratio": 39.72055393586006,
+    "rank_chain": [
+      23,
+      21,
+      20,
+      22,
+      22
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 10:37:18",
+    "contract_symbol": "BABYUSDT",
+    "display_name": "BABY",
+    "board_type": "primary",
+    "on_board_count": 7,
+    "last_bbw": 0.04781414093083271,
+    "last_price": 0.01336,
+    "last_ratio": 0.6306353677041947,
+    "rank_chain": [
+      21,
+      19,
+      17,
+      18,
+      17
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 10:37:18",
+    "contract_symbol": "MLNUSDT",
+    "display_name": "MLN",
+    "board_type": "primary",
+    "on_board_count": 4,
+    "last_bbw": 0.04043579165542193,
+    "last_price": 3.31,
+    "last_ratio": 1.307923670521569,
+    "rank_chain": [
+      24,
+      23,
+      23,
+      21
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 10:37:18",
+    "contract_symbol": "SENTUSDT",
+    "display_name": "SENT",
+    "board_type": "primary",
+    "on_board_count": 4,
+    "last_bbw": 0.04144499168925603,
+    "last_price": 0.01973,
+    "last_ratio": 3.119527597621276,
+    "rank_chain": [
+      25,
+      24,
+      24,
+      23
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 10:37:18",
+    "contract_symbol": "XMRUSDT",
+    "display_name": "XMR",
+    "board_type": "secondary",
+    "on_board_count": 4,
+    "last_bbw": 0.046256067490453884,
+    "last_price": 353.15,
+    "last_ratio": 1.089261064619129,
+    "rank_chain": [
+      25,
+      8,
+      25,
+      17
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 10:37:18",
+    "contract_symbol": "ERAUSDT",
+    "display_name": "ERA",
+    "board_type": "primary",
+    "on_board_count": 3,
+    "last_bbw": 0.041567836513159026,
+    "last_price": 0.1302,
+    "last_ratio": 1.7481307506345376,
+    "rank_chain": [
+      25,
+      25,
+      24
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 10:37:18",
+    "contract_symbol": "GUAUSDT",
+    "display_name": "GUA",
+    "board_type": "secondary",
+    "on_board_count": 2,
+    "last_bbw": 0.0431447420964127,
+    "last_price": 0.30009,
+    "last_ratio": 1.4259443751398109,
+    "rank_chain": [
+      1,
+      1
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 10:37:18",
+    "contract_symbol": "EDGEUSDT",
+    "display_name": "EDGE",
+    "board_type": "secondary",
+    "on_board_count": 2,
+    "last_bbw": 0.05092552497614465,
+    "last_price": 0.12684,
+    "last_ratio": 0.21944809789372516,
+    "rank_chain": [
+      2,
+      2
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 10:37:18",
+    "contract_symbol": "PLAYUSDT",
+    "display_name": "PLAY",
+    "board_type": "secondary",
+    "on_board_count": 2,
+    "last_bbw": 0.04666045977955698,
+    "last_price": 0.03579,
+    "last_ratio": 0.5305446073696973,
+    "rank_chain": [
+      6,
+      4
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 10:37:18",
+    "contract_symbol": "MONUSDT",
+    "display_name": "MON",
+    "board_type": "secondary",
+    "on_board_count": 2,
+    "last_bbw": 0.04001262278391817,
+    "last_price": 0.02137,
+    "last_ratio": 3.38964123098512,
+    "rank_chain": [
+      8,
+      6
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 10:37:18",
+    "contract_symbol": "KGENUSDT",
+    "display_name": "KGEN",
+    "board_type": "secondary",
+    "on_board_count": 2,
+    "last_bbw": 0.03946291034039554,
+    "last_price": 0.19772,
+    "last_ratio": 3.459499049174945,
+    "rank_chain": [
+      9,
+      7
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 10:37:18",
+    "contract_symbol": "MYXUSDT",
+    "display_name": "MYX",
+    "board_type": "secondary",
+    "on_board_count": 2,
+    "last_bbw": 0.03338059619575245,
+    "last_price": 0.3299,
+    "last_ratio": 0.7865638324745287,
+    "rank_chain": [
+      10,
+      8
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 10:37:18",
+    "contract_symbol": "DEGENUSDT",
+    "display_name": "DEGEN",
+    "board_type": "secondary",
+    "on_board_count": 2,
+    "last_bbw": 0.04329262339815095,
+    "last_price": 0.0007224,
+    "last_ratio": 0.8117239839300049,
+    "rank_chain": [
+      17,
+      12
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 10:37:18",
+    "contract_symbol": "INXUSDT",
+    "display_name": "INX",
+    "board_type": "secondary",
+    "on_board_count": 2,
+    "last_bbw": 0.03613381032453228,
+    "last_price": 0.01142,
+    "last_ratio": 1.0117127365167244,
+    "rank_chain": [
+      20,
+      14
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 10:37:18",
+    "contract_symbol": "KOMAUSDT",
+    "display_name": "KOMA",
+    "board_type": "secondary",
+    "on_board_count": 2,
+    "last_bbw": 0.02819164363305471,
+    "last_price": 0.00661,
+    "last_ratio": 3.0527092999552456,
+    "rank_chain": [
+      21,
+      15
+    ]
+  },
+  {
+    "timestamp": "2026-03-23 10:37:18",
+    "contract_symbol": "EVAAUSDT",
+    "display_name": "EVAA",
+    "board_type": "secondary",
+    "on_board_count": 2,
+    "last_bbw": 0.04295445780222442,
+    "last_price": 0.4687,
+    "last_ratio": 2.2952256751076012,
+    "rank_chain": [
+      24,
+      16
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 23:07:56",
+    "contract_symbol": "GUNUSDT",
+    "display_name": "GUN",
+    "board_type": "primary",
+    "on_board_count": 10,
+    "last_bbw": 0.06126257553865887,
+    "last_price": 0.02186,
+    "last_ratio": 0.3836399797741692,
+    "rank_chain": [
+      2,
+      2,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 23:07:56",
+    "contract_symbol": "B2USDT",
+    "display_name": "B2",
+    "board_type": "secondary",
+    "on_board_count": 10,
+    "last_bbw": 0.0387068136848126,
+    "last_price": 0.7407,
+    "last_ratio": 6.162564348187864,
+    "rank_chain": [
+      4,
+      4,
+      3,
+      1,
+      3
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 23:07:56",
+    "contract_symbol": "AIOUSDT",
+    "display_name": "AIO",
+    "board_type": "secondary",
+    "on_board_count": 10,
+    "last_bbw": 0.027692404245063022,
+    "last_price": 0.07996,
+    "last_ratio": 4.3724527194683125,
+    "rank_chain": [
+      5,
+      5,
+      4,
+      2,
+      4
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 23:07:56",
+    "contract_symbol": "AERGOUSDT",
+    "display_name": "AERGO",
+    "board_type": "secondary",
+    "on_board_count": 10,
+    "last_bbw": 0.023073281122638508,
+    "last_price": 0.05405,
+    "last_ratio": 1.511947463771879,
+    "rank_chain": [
+      15,
+      15,
+      14,
+      5,
+      14
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 22:26:20",
+    "contract_symbol": "FLOWUSDT",
+    "display_name": "FLOW",
+    "board_type": "primary",
+    "on_board_count": 8,
+    "last_bbw": 0.049443283744276846,
+    "last_price": 0.03058,
+    "last_ratio": 0.642775351318675,
+    "rank_chain": [
+      14,
+      13,
+      13,
+      13,
+      11
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 22:26:20",
+    "contract_symbol": "GUAUSDT",
+    "display_name": "GUA",
+    "board_type": "secondary",
+    "on_board_count": 8,
+    "last_bbw": 0.042848448515723676,
+    "last_price": 0.30016,
+    "last_ratio": 1.3721980998132661,
+    "rank_chain": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 22:26:20",
+    "contract_symbol": "EDGEUSDT",
+    "display_name": "EDGE",
+    "board_type": "secondary",
+    "on_board_count": 8,
+    "last_bbw": 0.04710059858111489,
+    "last_price": 0.12765,
+    "last_ratio": 0.2507073903590999,
+    "rank_chain": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 22:26:20",
+    "contract_symbol": "ESPORTSUSDT",
+    "display_name": "ESPORTS",
+    "board_type": "secondary",
+    "on_board_count": 8,
+    "last_bbw": 0.033758635694498024,
+    "last_price": 0.28475,
+    "last_ratio": 1.8443438138655417,
+    "rank_chain": [
+      8,
+      8,
+      8,
+      8,
+      7
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 22:26:20",
+    "contract_symbol": "MONUSDT",
+    "display_name": "MON",
+    "board_type": "secondary",
+    "on_board_count": 8,
+    "last_bbw": 0.044385125817245706,
+    "last_price": 0.02121,
+    "last_ratio": 3.3165314166960007,
+    "rank_chain": [
+      9,
+      9,
+      9,
+      9,
+      8
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 22:26:20",
+    "contract_symbol": "KGENUSDT",
+    "display_name": "KGEN",
+    "board_type": "secondary",
+    "on_board_count": 8,
+    "last_bbw": 0.026654597503764837,
+    "last_price": 0.1949,
+    "last_ratio": 3.6920070007403023,
+    "rank_chain": [
+      10,
+      10,
+      10,
+      10,
+      9
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 22:26:20",
+    "contract_symbol": "JELLYJELLYUSDT",
+    "display_name": "JELLYJELLY",
+    "board_type": "secondary",
+    "on_board_count": 8,
+    "last_bbw": 0.05114592927212744,
+    "last_price": 0.0542,
+    "last_ratio": 0.8179108921349746,
+    "rank_chain": [
+      12,
+      11,
+      11,
+      12,
+      10
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 22:26:20",
+    "contract_symbol": "MYXUSDT",
+    "display_name": "MYX",
+    "board_type": "secondary",
+    "on_board_count": 8,
+    "last_bbw": 0.035848309641566975,
+    "last_price": 0.3275,
+    "last_ratio": 0.7620669082878009,
+    "rank_chain": [
+      11,
+      12,
+      12,
+      11,
+      11
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 22:26:20",
+    "contract_symbol": "BUSDT",
+    "display_name": "B",
+    "board_type": "secondary",
+    "on_board_count": 8,
+    "last_bbw": 0.04557035496847079,
+    "last_price": 0.22,
+    "last_ratio": 7.954397624945008,
+    "rank_chain": [
+      13,
+      13,
+      13,
+      13,
+      12
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 22:26:20",
+    "contract_symbol": "EWJUSDT",
+    "display_name": "EWJ",
+    "board_type": "secondary",
+    "on_board_count": 8,
+    "last_bbw": 0.019654082951959438,
+    "last_price": 81.57,
+    "last_ratio": 0.5815826752753194,
+    "rank_chain": [
+      17,
+      17,
+      17,
+      17,
+      16
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 22:26:20",
+    "contract_symbol": "DEGENUSDT",
+    "display_name": "DEGEN",
+    "board_type": "secondary",
+    "on_board_count": 8,
+    "last_bbw": 0.04239326629665484,
+    "last_price": 0.0007237,
+    "last_ratio": 0.8142172594835749,
+    "rank_chain": [
+      18,
+      18,
+      18,
+      18,
+      17
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 22:26:20",
+    "contract_symbol": "CROSSUSDT",
+    "display_name": "CROSS",
+    "board_type": "secondary",
+    "on_board_count": 8,
+    "last_bbw": 0.04670521794517261,
+    "last_price": 0.0622,
+    "last_ratio": 0.6046755436230831,
+    "rank_chain": [
+      19,
+      19,
+      19,
+      19,
+      18
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 22:26:20",
+    "contract_symbol": "INXUSDT",
+    "display_name": "INX",
+    "board_type": "secondary",
+    "on_board_count": 8,
+    "last_bbw": 0.039780441334317275,
+    "last_price": 0.01144,
+    "last_ratio": 1.031557000263066,
+    "rank_chain": [
+      21,
+      21,
+      21,
+      21,
+      20
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 22:26:20",
+    "contract_symbol": "KOMAUSDT",
+    "display_name": "KOMA",
+    "board_type": "secondary",
+    "on_board_count": 8,
+    "last_bbw": 0.02964954347147562,
+    "last_price": 0.006605,
+    "last_ratio": 3.0911546639045513,
+    "rank_chain": [
+      23,
+      23,
+      23,
+      22,
+      21
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 22:26:20",
+    "contract_symbol": "DAMUSDT",
+    "display_name": "DAM",
+    "board_type": "secondary",
+    "on_board_count": 8,
+    "last_bbw": 0.0371480807592559,
+    "last_price": 0.02812,
+    "last_ratio": 6.457005047011291,
+    "rank_chain": [
+      22,
+      22,
+      22,
+      23,
+      23
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 22:26:20",
+    "contract_symbol": "PLAYUSDT",
+    "display_name": "PLAY",
+    "board_type": "secondary",
+    "on_board_count": 7,
+    "last_bbw": 0.04731161660245732,
+    "last_price": 0.03588,
+    "last_ratio": 0.45255834801784234,
+    "rank_chain": [
+      7,
+      7,
+      7,
+      7,
+      6
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 22:26:20",
+    "contract_symbol": "BSVUSDT",
+    "display_name": "BSV",
+    "board_type": "secondary",
+    "on_board_count": 7,
+    "last_bbw": 0.04462932211554337,
+    "last_price": 14.08,
+    "last_ratio": 1.6308603433626065,
+    "rank_chain": [
+      24,
+      24,
+      24,
+      24,
+      22
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 22:26:20",
+    "contract_symbol": "EVAAUSDT",
+    "display_name": "EVAA",
+    "board_type": "secondary",
+    "on_board_count": 7,
+    "last_bbw": 0.04607611657736573,
+    "last_price": 0.4661,
+    "last_ratio": 2.2676445416767015,
+    "rank_chain": [
+      25,
+      25,
+      25,
+      25,
+      24
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 22:05:34",
+    "contract_symbol": "PARTIUSDT",
+    "display_name": "PARTI",
+    "board_type": "primary",
+    "on_board_count": 7,
+    "last_bbw": 0.05126706078160849,
+    "last_price": 0.0845,
+    "last_ratio": 5.3225646140087814,
+    "rank_chain": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 22:05:34",
+    "contract_symbol": "ACTUSDT",
+    "display_name": "ACT",
+    "board_type": "primary",
+    "on_board_count": 7,
+    "last_bbw": 0.051019802910424475,
+    "last_price": 0.0136,
+    "last_ratio": 1.312653781207916,
+    "rank_chain": [
+      6,
+      6,
+      6,
+      6,
+      6
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 22:05:34",
+    "contract_symbol": "TRADOORUSDT",
+    "display_name": "TRADOOR",
+    "board_type": "secondary",
+    "on_board_count": 7,
+    "last_bbw": 0.052585746553026266,
+    "last_price": 2.092,
+    "last_ratio": 2.2384109042498754,
+    "rank_chain": [
+      3,
+      3,
+      3,
+      3,
+      3
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 21:03:41",
+    "contract_symbol": "OGUSDT",
+    "display_name": "OG",
+    "board_type": "primary",
+    "on_board_count": 4,
+    "last_bbw": 0.05341643607721407,
+    "last_price": 2.695,
+    "last_ratio": 1.1544905264601968,
+    "rank_chain": [
+      8,
+      8,
+      8,
+      8
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "PARTIUSDT",
+    "display_name": "PARTI",
+    "board_type": "primary",
+    "on_board_count": 61,
+    "last_bbw": 0.03859682499099057,
+    "last_price": 0.0825,
+    "last_ratio": 6.069372143789751,
+    "rank_chain": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "ACTUSDT",
+    "display_name": "ACT",
+    "board_type": "primary",
+    "on_board_count": 60,
+    "last_bbw": 0.03619275595935971,
+    "last_price": 0.0137,
+    "last_ratio": 1.4556774832774089,
+    "rank_chain": [
+      7,
+      7,
+      5,
+      5,
+      5
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "FFUSDT",
+    "display_name": "FF",
+    "board_type": "primary",
+    "on_board_count": 34,
+    "last_bbw": 0.008133517423027764,
+    "last_price": 0.07084,
+    "last_ratio": 6.764486332671015,
+    "rank_chain": [
+      8,
+      8,
+      6,
+      6,
+      6
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "KGENUSDT",
+    "display_name": "KGEN",
+    "board_type": "secondary",
+    "on_board_count": 33,
+    "last_bbw": 0.019927084639759406,
+    "last_price": 0.1911,
+    "last_ratio": 3.649650418603703,
+    "rank_chain": [
+      14,
+      14,
+      13,
+      13,
+      13
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "MONUSDT",
+    "display_name": "MON",
+    "board_type": "secondary",
+    "on_board_count": 26,
+    "last_bbw": 0.050207724765406574,
+    "last_price": 0.02127,
+    "last_ratio": 3.4089245083328095,
+    "rank_chain": [
+      13,
+      13,
+      12,
+      12,
+      12
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "KAITOUSDT",
+    "display_name": "KAITO",
+    "board_type": "primary",
+    "on_board_count": 25,
+    "last_bbw": 0.025259645028502902,
+    "last_price": 0.3575,
+    "last_ratio": 4.110928352952356,
+    "rank_chain": [
+      10,
+      10,
+      8,
+      8,
+      8
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "AUCTIONUSDT",
+    "display_name": "AUCTION",
+    "board_type": "primary",
+    "on_board_count": 25,
+    "last_bbw": 0.04288029909483512,
+    "last_price": 4.69,
+    "last_ratio": 1.559627276527832,
+    "rank_chain": [
+      11,
+      11,
+      9,
+      9,
+      9
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "TREEUSDT",
+    "display_name": "TREE",
+    "board_type": "primary",
+    "on_board_count": 19,
+    "last_bbw": 0.044399428547449944,
+    "last_price": 0.0646,
+    "last_ratio": 1.7273588113901768,
+    "rank_chain": [
+      14,
+      13,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "EWJUSDT",
+    "display_name": "EWJ",
+    "board_type": "secondary",
+    "on_board_count": 16,
+    "last_bbw": 0.0075879047912486425,
+    "last_price": 82.97,
+    "last_ratio": 0.6313976529754737,
+    "rank_chain": [
+      22,
+      22,
+      21,
+      21,
+      21
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "ATUSDT",
+    "display_name": "AT",
+    "board_type": "primary",
+    "on_board_count": 15,
+    "last_bbw": 0.02420761051393909,
+    "last_price": 0.1436,
+    "last_ratio": 2.9454260553665685,
+    "rank_chain": [
+      4,
+      4,
+      3,
+      3,
+      3
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "ZAMAUSDT",
+    "display_name": "ZAMA",
+    "board_type": "primary",
+    "on_board_count": 15,
+    "last_bbw": 0.038000615663960624,
+    "last_price": 0.02257,
+    "last_ratio": 2.0569287349512075,
+    "rank_chain": [
+      6,
+      6,
+      4,
+      4,
+      4
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "OGUSDT",
+    "display_name": "OG",
+    "board_type": "primary",
+    "on_board_count": 15,
+    "last_bbw": 0.03161092741582645,
+    "last_price": 2.732,
+    "last_ratio": 1.201237755304975,
+    "rank_chain": [
+      9,
+      9,
+      7,
+      7,
+      7
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "SOPHUSDT",
+    "display_name": "SOPH",
+    "board_type": "primary",
+    "on_board_count": 15,
+    "last_bbw": 0.01978321044284097,
+    "last_price": 0.00901,
+    "last_ratio": 2.119457154615023,
+    "rank_chain": [
+      12,
+      12,
+      10,
+      10,
+      10
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "DENTUSDT",
+    "display_name": "DENT",
+    "board_type": "primary",
+    "on_board_count": 15,
+    "last_bbw": 0.027717031711597874,
+    "last_price": 0.000226,
+    "last_ratio": 0.487905934222617,
+    "rank_chain": [
+      13,
+      14,
+      12,
+      12,
+      11
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "FLOWUSDT",
+    "display_name": "FLOW",
+    "board_type": "primary",
+    "on_board_count": 15,
+    "last_bbw": 0.04917116566019546,
+    "last_price": 0.03025,
+    "last_ratio": 0.7005922037126915,
+    "rank_chain": [
+      15,
+      15,
+      13,
+      13,
+      13
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "LAYERUSDT",
+    "display_name": "LAYER",
+    "board_type": "primary",
+    "on_board_count": 15,
+    "last_bbw": 0.035549207996518395,
+    "last_price": 0.0843,
+    "last_ratio": 0.8302038693571584,
+    "rank_chain": [
+      16,
+      17,
+      14,
+      14,
+      14
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "TNSRUSDT",
+    "display_name": "TNSR",
+    "board_type": "primary",
+    "on_board_count": 15,
+    "last_bbw": 0.044718974185204256,
+    "last_price": 0.0417,
+    "last_ratio": 1.096765101312112,
+    "rank_chain": [
+      17,
+      16,
+      15,
+      15,
+      15
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "HOMEUSDT",
+    "display_name": "HOME",
+    "board_type": "primary",
+    "on_board_count": 15,
+    "last_bbw": 0.029672347265607628,
+    "last_price": 0.02183,
+    "last_ratio": 3.817617203749786,
+    "rank_chain": [
+      19,
+      19,
+      16,
+      16,
+      16
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "AGLDUSDT",
+    "display_name": "AGLD",
+    "board_type": "primary",
+    "on_board_count": 15,
+    "last_bbw": 0.03748510324933803,
+    "last_price": 0.241,
+    "last_ratio": 0.5458789709181247,
+    "rank_chain": [
+      21,
+      22,
+      19,
+      19,
+      20
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "GUAUSDT",
+    "display_name": "GUA",
+    "board_type": "secondary",
+    "on_board_count": 15,
+    "last_bbw": 0.03628402310795029,
+    "last_price": 0.29792,
+    "last_ratio": 1.0075573753604643,
+    "rank_chain": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "EDGEUSDT",
+    "display_name": "EDGE",
+    "board_type": "secondary",
+    "on_board_count": 15,
+    "last_bbw": 0.026494218415151267,
+    "last_price": 0.12904,
+    "last_ratio": 0.2513708992530056,
+    "rank_chain": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "HUSDT",
+    "display_name": "H",
+    "board_type": "secondary",
+    "on_board_count": 15,
+    "last_bbw": 0.04409091971714331,
+    "last_price": 0.09732,
+    "last_ratio": 2.9544285528765593,
+    "rank_chain": [
+      8,
+      8,
+      8,
+      8,
+      8
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "ESPORTSUSDT",
+    "display_name": "ESPORTS",
+    "board_type": "secondary",
+    "on_board_count": 15,
+    "last_bbw": 0.03970934937092277,
+    "last_price": 0.28338,
+    "last_ratio": 1.9177287824813494,
+    "rank_chain": [
+      10,
+      11,
+      10,
+      10,
+      10
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "INUSDT",
+    "display_name": "IN",
+    "board_type": "secondary",
+    "on_board_count": 15,
+    "last_bbw": 0.04365390563889742,
+    "last_price": 0.05953,
+    "last_ratio": 0.7544875435911318,
+    "rank_chain": [
+      11,
+      10,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "JELLYJELLYUSDT",
+    "display_name": "JELLYJELLY",
+    "board_type": "secondary",
+    "on_board_count": 15,
+    "last_bbw": 0.04436419759681506,
+    "last_price": 0.05321,
+    "last_ratio": 0.9085233638817758,
+    "rank_chain": [
+      17,
+      17,
+      16,
+      16,
+      16
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "OGNUSDT",
+    "display_name": "OGN",
+    "board_type": "primary",
+    "on_board_count": 14,
+    "last_bbw": 0.04805780902705564,
+    "last_price": 0.02269,
+    "last_ratio": 0.7966632351675315,
+    "rank_chain": [
+      20,
+      20,
+      18,
+      17,
+      17
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "CROSSUSDT",
+    "display_name": "CROSS",
+    "board_type": "secondary",
+    "on_board_count": 14,
+    "last_bbw": 0.046665449210700295,
+    "last_price": 0.06365,
+    "last_ratio": 0.6993111782708712,
+    "rank_chain": [
+      23,
+      23,
+      22,
+      22,
+      22
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "DEGENUSDT",
+    "display_name": "DEGEN",
+    "board_type": "secondary",
+    "on_board_count": 14,
+    "last_bbw": 0.04032569795371876,
+    "last_price": 0.0007333,
+    "last_ratio": 0.8841539443258312,
+    "rank_chain": [
+      24,
+      24,
+      23,
+      23,
+      23
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "XPINUSDT",
+    "display_name": "XPIN",
+    "board_type": "secondary",
+    "on_board_count": 13,
+    "last_bbw": 0.045805618788648125,
+    "last_price": 0.0013043,
+    "last_ratio": 7.649563265659074,
+    "rank_chain": [
+      4,
+      4,
+      4,
+      4,
+      4
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "SOLUSDT",
+    "display_name": "SOL",
+    "board_type": "primary",
+    "on_board_count": 12,
+    "last_bbw": 0.04649562840429316,
+    "last_price": 87.39,
+    "last_ratio": 51.06420123897128,
+    "rank_chain": [
+      18,
+      18,
+      17,
+      18,
+      18
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "GUNUSDT",
+    "display_name": "GUN",
+    "board_type": "primary",
+    "on_board_count": 11,
+    "last_bbw": 0.0449475664222563,
+    "last_price": 0.02034,
+    "last_ratio": 0.2571599443727594,
+    "rank_chain": [
+      3,
+      3,
+      2,
+      2,
+      2
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "DOGSUSDT",
+    "display_name": "DOGS",
+    "board_type": "primary",
+    "on_board_count": 11,
+    "last_bbw": 0.03731995237959285,
+    "last_price": 2.76e-05,
+    "last_ratio": 0.5965942775387563,
+    "rank_chain": [
+      22,
+      21,
+      20,
+      20,
+      19
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "TRADOORUSDT",
+    "display_name": "TRADOOR",
+    "board_type": "secondary",
+    "on_board_count": 8,
+    "last_bbw": 0.037453976496795514,
+    "last_price": 2.051,
+    "last_ratio": 1.4410200933823298,
+    "rank_chain": [
+      3,
+      3,
+      3,
+      3,
+      3
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "TACUSDT",
+    "display_name": "TAC",
+    "board_type": "secondary",
+    "on_board_count": 8,
+    "last_bbw": 0.018307462112307587,
+    "last_price": 0.004263,
+    "last_ratio": 5.393217335095893,
+    "rank_chain": [
+      7,
+      7,
+      7,
+      7,
+      7
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "TAGUSDT",
+    "display_name": "TAG",
+    "board_type": "secondary",
+    "on_board_count": 8,
+    "last_bbw": 0.044929796250109184,
+    "last_price": 0.0005826,
+    "last_ratio": 6.308917064832507,
+    "rank_chain": [
+      9,
+      9,
+      9,
+      9,
+      9
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "ZKJUSDT",
+    "display_name": "ZKJ",
+    "board_type": "secondary",
+    "on_board_count": 8,
+    "last_bbw": 0.045948176766906004,
+    "last_price": 0.02144,
+    "last_ratio": 1.7997515630400762,
+    "rank_chain": [
+      18,
+      18,
+      17,
+      17,
+      17
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "TRUSTUSDT",
+    "display_name": "TRUST",
+    "board_type": "secondary",
+    "on_board_count": 8,
+    "last_bbw": 0.03311693740882377,
+    "last_price": 0.06663,
+    "last_ratio": 0.9353519900040367,
+    "rank_chain": [
+      19,
+      19,
+      18,
+      18,
+      18
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "UBUSDT",
+    "display_name": "UB",
+    "board_type": "secondary",
+    "on_board_count": 8,
+    "last_bbw": 0.018027589525876683,
+    "last_price": 0.03148,
+    "last_ratio": 4.732447092877433,
+    "rank_chain": [
+      20,
+      20,
+      19,
+      19,
+      19
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "STABLEUSDT",
+    "display_name": "STABLE",
+    "board_type": "secondary",
+    "on_board_count": 8,
+    "last_bbw": 0.02068317866591471,
+    "last_price": 0.02548,
+    "last_ratio": 1.5444357843567562,
+    "rank_chain": [
+      25,
+      25,
+      24,
+      24,
+      24
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "B2USDT",
+    "display_name": "B2",
+    "board_type": "secondary",
+    "on_board_count": 7,
+    "last_bbw": 0.018981977855915502,
+    "last_price": 0.7301,
+    "last_ratio": 10.627840232627824,
+    "rank_chain": [
+      5,
+      5,
+      5,
+      5,
+      5
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "AIOUSDT",
+    "display_name": "AIO",
+    "board_type": "secondary",
+    "on_board_count": 7,
+    "last_bbw": 0.027572694118500028,
+    "last_price": 0.08136,
+    "last_ratio": 4.919837237116435,
+    "rank_chain": [
+      6,
+      6,
+      6,
+      6,
+      6
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "BIRBUSDT",
+    "display_name": "BIRB",
+    "board_type": "secondary",
+    "on_board_count": 7,
+    "last_bbw": 0.05162111240620629,
+    "last_price": 0.15143,
+    "last_ratio": 1.8601470088020398,
+    "rank_chain": [
+      15,
+      15,
+      14,
+      14,
+      14
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "AERGOUSDT",
+    "display_name": "AERGO",
+    "board_type": "secondary",
+    "on_board_count": 7,
+    "last_bbw": 0.026637576395088187,
+    "last_price": 0.05433,
+    "last_ratio": 0.8766548785726005,
+    "rank_chain": [
+      21,
+      21,
+      20,
+      20,
+      20
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "OPENUSDT",
+    "display_name": "OPEN",
+    "board_type": "primary",
+    "on_board_count": 6,
+    "last_bbw": 0.02749553750531143,
+    "last_price": 0.1534,
+    "last_ratio": 2.2135555395885596,
+    "rank_chain": [
+      24,
+      24,
+      21,
+      21,
+      21
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "MYXUSDT",
+    "display_name": "MYX",
+    "board_type": "secondary",
+    "on_board_count": 6,
+    "last_bbw": 0.036353756318897354,
+    "last_price": 0.3342,
+    "last_ratio": 0.7549396078935766,
+    "rank_chain": [
+      16,
+      16,
+      15,
+      15,
+      15
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "ACXUSDT",
+    "display_name": "ACX",
+    "board_type": "primary",
+    "on_board_count": 5,
+    "last_bbw": 0.029207065711953892,
+    "last_price": 0.0422,
+    "last_ratio": 0.9368835558283284,
+    "rank_chain": [
+      25,
+      25,
+      22,
+      22,
+      22
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "SYNUSDT",
+    "display_name": "SYN",
+    "board_type": "primary",
+    "on_board_count": 3,
+    "last_bbw": 0.03902690757169259,
+    "last_price": 0.0472,
+    "last_ratio": 0.7187752687627935,
+    "rank_chain": [
+      23,
+      23,
+      23
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "SANTOSUSDT",
+    "display_name": "SANTOS",
+    "board_type": "primary",
+    "on_board_count": 3,
+    "last_bbw": 0.05343638674631778,
+    "last_price": 1.074,
+    "last_ratio": 0.9356510044449962,
+    "rank_chain": [
+      24,
+      24,
+      24
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "HIGHUSDT",
+    "display_name": "HIGH",
+    "board_type": "primary",
+    "on_board_count": 3,
+    "last_bbw": 0.04887920113817163,
+    "last_price": 0.131,
+    "last_ratio": 0.8430903270995833,
+    "rank_chain": [
+      25,
+      25,
+      25
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 18:02:14",
+    "contract_symbol": "INXUSDT",
+    "display_name": "INX",
+    "board_type": "secondary",
+    "on_board_count": 3,
+    "last_bbw": 0.0396349083558158,
+    "last_price": 0.0113,
+    "last_ratio": 1.0128881150626763,
+    "rank_chain": [
+      25,
+      25,
+      25
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 17:05:12",
+    "contract_symbol": "ENSOUSDT",
+    "display_name": "ENSO",
+    "board_type": "primary",
+    "on_board_count": 12,
+    "last_bbw": 0.05076701608893309,
+    "last_price": 1.123,
+    "last_ratio": 0.7766180798384329,
+    "rank_chain": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 17:05:12",
+    "contract_symbol": "ZKCUSDT",
+    "display_name": "ZKC",
+    "board_type": "primary",
+    "on_board_count": 5,
+    "last_bbw": 0.053150544963689754,
+    "last_price": 0.0741,
+    "last_ratio": 1.0111233812323523,
+    "rank_chain": [
+      25,
+      25,
+      23,
+      23,
+      23
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 17:05:12",
+    "contract_symbol": "BASUSDT",
+    "display_name": "BAS",
+    "board_type": "secondary",
+    "on_board_count": 4,
+    "last_bbw": 0.060844312535815015,
+    "last_price": 0.010465,
+    "last_ratio": 0.35530967986276135,
+    "rank_chain": [
+      12,
+      12,
+      12,
+      12
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 17:05:12",
+    "contract_symbol": "STGUSDT",
+    "display_name": "STG",
+    "board_type": "primary",
+    "on_board_count": 3,
+    "last_bbw": 0.050249978536583376,
+    "last_price": 0.1755,
+    "last_ratio": 3.154086249712932,
+    "rank_chain": [
+      5,
+      5,
+      5
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 16:06:10",
+    "contract_symbol": "ZKPUSDT",
+    "display_name": "ZKP",
+    "board_type": "primary",
+    "on_board_count": 9,
+    "last_bbw": 0.05242904471912802,
+    "last_price": 0.0757,
+    "last_ratio": 1.1571837910646527,
+    "rank_chain": [
+      6,
+      6,
+      5,
+      5,
+      5
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 16:06:10",
+    "contract_symbol": "COOKIEUSDT",
+    "display_name": "COOKIE",
+    "board_type": "primary",
+    "on_board_count": 9,
+    "last_bbw": 0.05049297214765985,
+    "last_price": 0.0174,
+    "last_ratio": 0.7360378951745732,
+    "rank_chain": [
+      23,
+      24,
+      22,
+      23,
+      22
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 16:06:10",
+    "contract_symbol": "MIRAUSDT",
+    "display_name": "MIRA",
+    "board_type": "primary",
+    "on_board_count": 9,
+    "last_bbw": 0.05091150863155955,
+    "last_price": 0.0789,
+    "last_ratio": 1.2408820196555415,
+    "rank_chain": [
+      24,
+      23,
+      23,
+      22,
+      23
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 16:06:10",
+    "contract_symbol": "INXUSDT",
+    "display_name": "INX",
+    "board_type": "secondary",
+    "on_board_count": 5,
+    "last_bbw": 0.035019212342163375,
+    "last_price": 0.01119,
+    "last_ratio": 0.9713268232386462,
+    "rank_chain": [
+      25,
+      25,
+      18,
+      20,
+      25
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 15:45:58",
+    "contract_symbol": "DAMUSDT",
+    "display_name": "DAM",
+    "board_type": "secondary",
+    "on_board_count": 2,
+    "last_bbw": 0.02711085409375471,
+    "last_price": 0.02847,
+    "last_ratio": 7.904063796878496,
+    "rank_chain": [
+      19,
+      21
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 15:45:58",
+    "contract_symbol": "KOMAUSDT",
+    "display_name": "KOMA",
+    "board_type": "secondary",
+    "on_board_count": 2,
+    "last_bbw": 0.028986100516772632,
+    "last_price": 0.00659,
+    "last_ratio": 3.6688144358575965,
+    "rank_chain": [
+      20,
+      22
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 15:45:58",
+    "contract_symbol": "BSVUSDT",
+    "display_name": "BSV",
+    "board_type": "secondary",
+    "on_board_count": 2,
+    "last_bbw": 0.04585584034799547,
+    "last_price": 14.28,
+    "last_ratio": 1.7185118746910488,
+    "rank_chain": [
+      21,
+      23
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 15:45:58",
+    "contract_symbol": "EVAAUSDT",
+    "display_name": "EVAA",
+    "board_type": "secondary",
+    "on_board_count": 2,
+    "last_bbw": 0.04018930311109031,
+    "last_price": 0.4704,
+    "last_ratio": 2.2148456858859418,
+    "rank_chain": [
+      22,
+      24
+    ]
+  },
+  {
+    "timestamp": "2026-03-22 15:45:58",
+    "contract_symbol": "XMRUSDT",
+    "display_name": "XMR",
+    "board_type": "secondary",
+    "on_board_count": 2,
+    "last_bbw": 0.040731308325447295,
+    "last_price": 343.03,
+    "last_ratio": 1.248112206740876,
+    "rank_chain": [
+      23,
+      25
+    ]
+  }
+]

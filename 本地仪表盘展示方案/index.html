@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>横盘爆发雷达 | Squeeze Radar</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-card: rgba(22, 27, 34, 0.8);
+            --bg-glass: rgba(30, 37, 48, 0.6);
+            --text-primary: #e6edf3;
+            --text-secondary: #7d8590;
+            --text-muted: #484f58;
+            --accent-cyan: #00f5d4;
+            --accent-blue: #58a6ff;
+            --accent-pink: #ff0054;
+            --accent-amber: #f0b90b;
+            --accent-green: #0ecb81;
+            --accent-red: #f6465d;
+            --border: rgba(255, 255, 255, 0.08);
+            --glow-cyan: 0 0 20px rgba(0, 245, 212, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: 'Inter', -apple-system, sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Background gradient orbs */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -200px;
+            right: -200px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 245, 212, 0.05), transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            bottom: -300px;
+            left: -100px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 0, 84, 0.04), transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        #app {
+            position: relative;
+            z-index: 1;
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 20px 24px;
+        }
+
+        /* ===== Header ===== */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            background: var(--bg-glass);
+            backdrop-filter: blur(20px);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .status-pill {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            padding: 5px 14px;
+            border-radius: 20px;
+            background: rgba(14, 203, 129, 0.1);
+            color: var(--accent-green);
+            border: 1px solid rgba(14, 203, 129, 0.2);
+        }
+
+        .status-pill .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent-green);
+            animation: blink 2s infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-active {
+            background: var(--accent-cyan) !important;
+            color: #000 !important;
+            border-color: var(--accent-cyan) !important;
+            box-shadow: var(--glow-cyan);
+        }
+
+        .meta-text {
+            font-size: 12px;
+            color: var(--text-secondary);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* ===== Stats Bar ===== */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: var(--bg-glass);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px 20px;
+            text-align: center;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .stat-value {
+            font-size: 28px;
+            font-weight: 800;
+            font-family: 'JetBrains Mono', monospace;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-value.warning {
+            background: linear-gradient(135deg, var(--accent-amber), var(--accent-red));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* ===== Data Table ===== */
+        .table-card {
+            background: var(--bg-glass);
+            backdrop-filter: blur(24px);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 0;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .table-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .table-title {
+            font-size: 16px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            padding: 12px 16px;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            background: var(--bg-secondary);
+        }
+
+        th.sortable {
+            cursor: pointer;
+            user-select: none;
+            transition: color 0.2s;
+        }
+
+        th.sortable:hover {
+            color: var(--text-primary);
+        }
+
+        th.sortable::after {
+            content: ' ↕';
+            opacity: 0.3;
+            font-size: 10px;
+        }
+
+        th.sort-asc::after {
+            content: ' ↑';
+            opacity: 1;
+            color: var(--accent-cyan);
+        }
+
+        th.sort-desc::after {
+            content: ' ↓';
+            opacity: 1;
+            color: var(--accent-pink);
+        }
+
+        td {
+            padding: 14px 16px;
+            font-size: 13px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            transition: background 0.3s;
+        }
+
+        tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .symbol-cell {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .symbol-rank {
+            width: 26px;
+            height: 26px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 700;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-secondary);
+        }
+
+        .rank-1 {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: #000;
+        }
+
+        .rank-2 {
+            background: linear-gradient(135deg, #C0C0C0, #A0A0A0);
+            color: #000;
+        }
+
+        .rank-3 {
+            background: linear-gradient(135deg, #CD7F32, #a5682a);
+            color: #fff;
+        }
+
+        .symbol-name {
+            font-weight: 700;
+            font-size: 14px;
+            color: #fff;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .symbol-name:hover {
+            color: var(--accent-cyan);
+        }
+
+        .trend-badge {
+            font-size: 11px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .trend-up {
+            background: rgba(14, 203, 129, 0.15);
+            color: var(--accent-green);
+        }
+
+        .trend-down {
+            background: rgba(246, 70, 93, 0.15);
+            color: var(--accent-red);
+        }
+
+        .trend-new {
+            background: rgba(88, 166, 255, 0.15);
+            color: var(--accent-blue);
+        }
+
+        .trend-stable {
+            color: var(--text-muted);
+        }
+
+        /* Duration progress bar */
+        .duration-bar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .bar-track {
+            flex: 1;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 3px;
+            overflow: hidden;
+            max-width: 100px;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 3px;
+            transition: width 0.8s ease;
+        }
+
+        /* BBW heatmap color */
+        .bbw-cell {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+        /* Ratio highlight */
+        .ratio-pill {
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            font-size: 13px;
+            display: inline-block;
+        }
+
+        .score-pill {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        .score-high {
+            background: rgba(14, 203, 129, 0.15);
+            color: var(--accent-green);
+            border: 1px solid rgba(14, 203, 129, 0.3);
+        }
+
+        .score-none {
+            background: rgba(148, 163, 184, 0.1);
+            color: var(--text-dim);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+        }
+
+        .ratio-high {
+            background: rgba(246, 70, 93, 0.15);
+            color: var(--accent-red);
+            border: 1px solid rgba(246, 70, 93, 0.3);
+        }
+
+        .ratio-mid {
+            background: rgba(240, 185, 11, 0.15);
+            color: var(--accent-amber);
+            border: 1px solid rgba(240, 185, 11, 0.3);
+        }
+
+        .ratio-normal {
+            color: var(--text-secondary);
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .link-btn {
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            background: rgba(255, 255, 255, 0.04);
+            transition: all 0.2s;
+            border: 1px solid transparent;
+        }
+
+        .link-btn:hover {
+            color: var(--accent-cyan);
+            background: rgba(0, 245, 212, 0.08);
+            border-color: rgba(0, 245, 212, 0.2);
+        }
+
+        /* Sparkline */
+        .sparkline-container {
+            width: 80px;
+            height: 24px;
+        }
+
+        /* Pulse animation for updated rows */
+        @keyframes row-pulse {
+            0% {
+                background: rgba(0, 245, 212, 0.08);
+            }
+
+            100% {
+                background: transparent;
+            }
+        }
+
+        .row-updated {
+            animation: row-pulse 1.5s ease-out;
+        }
+
+        /* Alert toast */
+        #alert-toast {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            max-width: 320px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .toast-item {
+            background: rgba(255, 0, 84, 0.12);
+            border: 1px solid rgba(255, 0, 84, 0.3);
+            backdrop-filter: blur(16px);
+            padding: 12px 16px;
+            border-radius: 10px;
+            font-size: 13px;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .format-num {
+            color: var(--text-secondary);
+            font-size: 12px;
+        }
+
+        /* 报警闪烁动画 */
+        @keyframes alert-flash {
+            0% {
+                background: rgba(245, 0, 84, 0);
+            }
+
+            50% {
+                background: rgba(245, 0, 84, 0.4);
+            }
+
+            100% {
+                background: rgba(245, 0, 84, 0);
+            }
+        }
+
+        .alert-row {
+            animation: alert-flash 1s infinite !important;
+            border: 2px solid var(--accent-red) !important;
+        }
+
+        /* 报警面板样式 */
+        #alert-log {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 320px;
+            background: var(--bg-glass);
+            backdrop-filter: blur(24px);
+            border-radius: 16px;
+            border: 1px solid var(--accent-red);
+            padding: 0;
+            max-height: 480px;
+            z-index: 1000;
+            display: none;
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+            flex-direction: column;
+        }
+
+        #alert-log.minimized {
+            max-height: 48px;
+            width: 200px;
+            opacity: 0.8;
+        }
+
+        .log-header {
+            padding: 12px 16px;
+            background: rgba(245, 0, 84, 0.1);
+            border-bottom: 1px solid rgba(245, 0, 84, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        #log-content {
+            padding: 16px;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        /* 滚动条美化 */
+        #log-content::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        #log-content::-webkit-scrollbar-thumb {
+            background: rgba(245, 0, 84, 0.3);
+            border-radius: 10px;
+        }
+
+        .log-item {
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 13px;
+        }
+
+        .log-time {
+            color: var(--text-secondary);
+            font-size: 11px;
+            margin-bottom: 2px;
+        }
+
+        .log-msg {
+            color: var(--accent-red);
+            font-weight: 500;
+        }
+
+        .btn-alert-on {
+            background: var(--accent-red) !important;
+            color: white !important;
+        }
+
+        /* ===== Disappeared Log Panel ===== */
+        #disappeared-log {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            width: 380px;
+            background: var(--bg-glass);
+            backdrop-filter: blur(24px);
+            border-radius: 16px;
+            border: 1px solid var(--accent-amber);
+            padding: 0;
+            max-height: 520px;
+            z-index: 1000;
+            display: none;
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+            flex-direction: column;
+        }
+
+        #disappeared-log.minimized {
+            max-height: 48px;
+            width: 220px;
+            opacity: 0.8;
+        }
+
+        .dis-log-header {
+            padding: 12px 16px;
+            background: rgba(240, 185, 11, 0.1);
+            border-bottom: 1px solid rgba(240, 185, 11, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        #dis-log-content {
+            padding: 12px 16px;
+            overflow-y: auto;
+            flex: 1;
+            max-height: 460px;
+        }
+
+        #dis-log-content::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        #dis-log-content::-webkit-scrollbar-thumb {
+            background: rgba(240, 185, 11, 0.3);
+            border-radius: 10px;
+        }
+
+        .dis-item {
+            margin-bottom: 10px;
+            padding: 10px 12px;
+            background: rgba(240, 185, 11, 0.05);
+            border: 1px solid rgba(240, 185, 11, 0.12);
+            border-radius: 10px;
+            transition: background 0.2s;
+        }
+
+        .dis-item:hover {
+            background: rgba(240, 185, 11, 0.1);
+        }
+
+        .dis-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+
+        .dis-item-symbol {
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--accent-amber);
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .dis-item-symbol:hover {
+            color: #fff;
+        }
+
+        .dis-item-board {
+            font-size: 10px;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 999px;
+            background: rgba(240, 185, 11, 0.15);
+            color: var(--accent-amber);
+        }
+
+        .dis-item-meta {
+            display: flex;
+            gap: 12px;
+            font-size: 11px;
+            color: var(--text-secondary);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .dis-item-meta span {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .dis-item-time {
+            font-size: 10px;
+            color: var(--text-muted);
+            margin-top: 5px;
+        }
+
+        /* Ghost pulse animation for newly disappeared */
+        @keyframes ghost-pulse {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .dis-item.fresh {
+            animation: ghost-pulse 2s ease-in-out 3;
+            border-color: var(--accent-amber);
+        }
+
+        .no-flash .alert-row {
+            animation: none !important;
+            border-color: rgba(245, 0, 84, 0.4) !important;
+            background: rgba(245, 0, 84, 0.1) !important;
+        }
+
+        .no-flash .row-updated {
+            animation: none !important;
+        }
+
+        .watch-btn-cell {
+            cursor: pointer;
+            opacity: 0.3;
+            transition: all 0.2s;
+            font-size: 14px;
+            user-select: none;
+        }
+
+        .watch-btn-cell:hover {
+            opacity: 0.8;
+            transform: scale(1.1);
+        }
+
+        .watch-btn-cell.watched {
+            opacity: 1;
+            text-shadow: 0 0 10px rgba(240, 185, 11, 0.8);
+            color: var(--accent-amber);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <div class="logo">SQUEEZE RADAR <span id="conn-status" class="status-dot"></span></div>
+            <div class="header-controls">
+                <button id="visual-alert-btn" class="btn btn-active" onclick="toggleVisualAlert()">✨ 动效提示: 开</button>
+                <button id="watch-btn" class="btn" onclick="toggleWatchlistFilter()">🌟 仅看关注</button>
+                <button id="tts-btn" class="btn" onclick="toggleTTS()">📢 语音预警: 关</button>
+                <button class="btn" onclick="toggleLogVisibility()">📊 异动日志</button>
+                <button class="btn" onclick="toggleDisappearedVisibility()" id="dis-btn">👻 消失日志</button>
+                <div id="last-update" class="last-update">等待首次扫描...</div>
+            </div>
+        </header>
+
+        <div class="stats-bar">
+            <div class="stat-card">
+                <div class="stat-label">扫描合约</div>
+                <div class="stat-value" id="stat-total">--</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">平均时长</div>
+                <div class="stat-value" id="stat-primary">--</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">平均BBW</div>
+                <div class="stat-value warning" id="stat-secondary">--</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-label">平均评分</div>
+                <div class="stat-value" id="stat-uncovered">--</div>
+            </div>
+        </div>
+
+        <div style="display:grid; gap:20px;">
+            <div class="table-card">
+                <div class="table-header">
+                    <div>
+                        <div class="table-title">横盘列表 · 单表排序</div>
+                        <div class="meta-text" style="margin-top:6px;">主源与补充源合并展示，可直接使用统一表头排序</div>
+                    </div>
+                    <div class="meta-text" id="merged-info">--</div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width:50px">#</th>
+                            <th class="sortable" data-board="merged" data-key="display_name" style="width:150px">合约</th>
+                            <th style="width:130px">现货映射</th>
+                            <th class="sortable" data-board="merged" data-key="sort_priority" style="width:88px">层级</th>
+                            <th class="sortable" data-board="merged" data-key="duration_hours" style="width:150px">缩圈时长
+                            </th>
+                            <th class="sortable" data-board="merged" data-key="bbw" style="width:90px">BBW</th>
+                            <th class="sortable" data-board="merged" data-key="price_change_12h" style="width:100px">12h
+                                涨跌</th>
+                            <th class="sortable" data-board="merged" data-key="long_score" style="width:90px">⭐做多评分</th>
+                            <th class="sortable" data-board="merged" data-key="oi_mc_ratio" style="width:100px">💀持仓/市值比
+                            </th>
+                            <th class="sortable" data-board="merged" data-key="oi_vol_ratio" style="width:100px">持仓/成交比
+                            </th>
+                            <th style="width:140px">原始筹码(持/交/市)</th>
+                            <th style="width:120px">来源</th>
+                            <th style="width:70px">趋势</th>
+                            <th style="width:90px">Sparkline</th>
+                            <th style="width:60px">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="merged-body"></tbody>
+                </table>
+            </div>
+
+            <div class="table-card">
+
+                <div class="table-header">
+                    <div>
+                        <div class="table-title">未覆盖</div>
+                        <div class="meta-text" style="margin-top:6px;">当前无法获取可用 K 线的合约，供后续排查映射或数据源问题</div>
+                    </div>
+                    <div class="meta-text" id="uncovered-info">--</div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width:160px">合约</th>
+                            <th style="width:130px">现货候选</th>
+                            <th style="width:110px">映射状态</th>
+                            <th style="width:110px">指标来源</th>
+                            <th>原因</th>
+                        </tr>
+                    </thead>
+                    <tbody id="uncovered-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="alert-toast"></div>
+    <div id="alert-log" class="row-updated">
+        <div class="log-header" onclick="toggleLogPanel()">
+            <div
+                style="font-size:14px; font-weight:700; color:var(--accent-red); display:flex; align-items:center; gap:8px;">
+                <span>🚨 异动日志</span>
+                <span id="log-count-badge"
+                    style="background:var(--accent-red); color:white; font-size:10px; padding:1px 5px; border-radius:10px; display:none;">0</span>
+            </div>
+            <div style="font-size:18px; opacity:0.6;" id="log-toggle-icon">−</div>
+        </div>
+        <div id="log-content"></div>
+    </div>
+
+    <div id="disappeared-log">
+        <div class="dis-log-header" onclick="toggleDisPanel()">
+            <div
+                style="font-size:14px; font-weight:700; color:var(--accent-amber); display:flex; align-items:center; gap:8px;">
+                <span>👻 消失日志</span>
+                <span id="dis-count-badge"
+                    style="background:var(--accent-amber); color:#000; font-size:10px; font-weight:700; padding:1px 6px; border-radius:10px; display:none;">0</span>
+            </div>
+            <div style="font-size:18px; opacity:0.6;" id="dis-toggle-icon">−</div>
+        </div>
+        <div id="dis-log-content"></div>
+    </div>
+
+    <script>
+        const boards = {
+            merged: [],
+            uncovered: []
+        };
+        const sortConfigs = {
+            merged: { key: 'long_score', direction: 'desc' }
+        };
+
+        let visualAlertEnabled = true;
+        let showOnlyWatchlist = false;
+        let watchedSymbols = new Set(JSON.parse(localStorage.getItem('squeezeRadarWatch') || '[]'));
+
+        let ttsEnabled = false;
+        let ws;
+        const notifiedSymbols = new Set();
+
+        function toggleVisualAlert() {
+            visualAlertEnabled = !visualAlertEnabled;
+            const btn = document.getElementById('visual-alert-btn');
+            if (visualAlertEnabled) {
+                document.body.classList.remove('no-flash');
+                btn.textContent = '✨ 动效提示: 开';
+                btn.classList.add('btn-active');
+            } else {
+                document.body.classList.add('no-flash');
+                btn.textContent = '✨ 动效提示: 关';
+                btn.classList.remove('btn-active');
+            }
+        }
+
+        function toggleWatch(symbol) {
+            if (watchedSymbols.has(symbol)) {
+                watchedSymbols.delete(symbol);
+            } else {
+                watchedSymbols.add(symbol);
+            }
+            localStorage.setItem('squeezeRadarWatch', JSON.stringify(Array.from(watchedSymbols)));
+            renderBoard('merged', boards.merged, 'merged-body');
+        }
+
+        function toggleWatchlistFilter() {
+            showOnlyWatchlist = !showOnlyWatchlist;
+            const btn = document.getElementById('watch-btn');
+            if (showOnlyWatchlist) {
+                btn.classList.add('btn-active');
+                btn.textContent = '🌟 正在看关注';
+            } else {
+                btn.classList.remove('btn-active');
+                btn.textContent = '🌟 仅看关注';
+            }
+            renderBoard('merged', boards.merged, 'merged-body');
+        }
+
+        function connectWS() {
+            ws = new WebSocket(`ws://${window.location.host}/ws`);
+            ws.onopen = () => {
+                document.getElementById('conn-status').classList.remove('disconnected');
+                document.getElementById('conn-status').classList.add('connected');
+            };
+            ws.onmessage = (e) => {
+                const msg = JSON.parse(e.data);
+                if (msg.type === 'UPDATE') {
+                    handleUpdate(msg.data);
+                } else if (msg.type === 'PROGRESS') {
+                    document.getElementById('last-update').textContent = `⏳ ${msg.msg}`;
+                    document.getElementById('last-update').style.color = 'var(--accent-cyan)';
+                }
+            };
+            ws.onclose = () => {
+                document.getElementById('conn-status').classList.remove('connected');
+                document.getElementById('conn-status').classList.add('disconnected');
+                setTimeout(connectWS, 3000);
+            };
+        }
+        connectWS();
+
+        function handleUpdate(data) {
+            const primaryItems = data.primary_board || [];
+            const secondaryItems = data.secondary_board || [];
+            boards.merged = [
+                ...primaryItems.map(item => ({ ...item, board_label: '主源', sort_priority: 0, board_type: 'primary' })),
+                ...secondaryItems.map(item => ({ ...item, board_label: '补充', sort_priority: 1, board_type: 'secondary' }))
+            ];
+            boards.uncovered = data.uncovered || [];
+
+            document.getElementById('last-update').textContent = `最后更新: ${data.timestamp}`;
+            document.getElementById('last-update').style.color = 'var(--text-secondary)';
+            document.getElementById('stat-total').textContent = data.total_scanned ?? '--';
+            const avgDuration = boards.merged.length ? (boards.merged.reduce((sum, item) => sum + (item.duration_hours || 0), 0) / boards.merged.length).toFixed(1) + 'h' : '--';
+            const avgBbw = boards.merged.length ? (boards.merged.reduce((sum, item) => sum + (item.bbw || 0), 0) / boards.merged.length).toFixed(2) + '%' : '--';
+            const avgScore = boards.merged.length ? (boards.merged.reduce((sum, item) => sum + (item.long_score || 0), 0) / boards.merged.length).toFixed(1) : '--';
+
+            document.getElementById('stat-primary').textContent = avgDuration;
+            document.getElementById('stat-secondary').textContent = avgBbw;
+            document.getElementById('stat-uncovered').textContent = avgScore;
+
+            document.getElementById('merged-info').textContent = `横盘 ${boards.merged.length} 个（主源 ${primaryItems.length} / 补充 ${secondaryItems.length}）`;
+            document.getElementById('uncovered-info').textContent = `未覆盖 ${boards.uncovered.length} 个`;
+
+            if (ttsEnabled && data.ratio_drops && data.ratio_drops.length > 0) {
+                if (data.ratio_drops.length > 3) {
+                    showToast(`📈 ${data.ratio_drops.length} 个币种比值大幅下降`);
+                    speak(`${data.ratio_drops.length} 个标的比值出现集体异动`);
+                } else {
+                    data.ratio_drops.forEach(sym => {
+                        speak(`${sym} 比值下降`);
+                        showToast(`📉 ${sym} OI/Vol 比值下降`);
+                    });
+                }
+            }
+
+            renderAlertHistory(data.alert_history || []);
+            renderDisappearedLog(data.disappeared || [], data.disappeared_history || []);
+            renderBoard('merged', boards.merged, 'merged-body');
+            renderUncovered();
+        }
+
+        function timeAgo(dateStr) {
+            const date = new Date(dateStr.replace(/-/g, '/'));
+            const now = new Date();
+            const diff = Math.floor((now - date) / 1000);
+            if (diff < 30) return '刚刚';
+            if (diff < 60) return diff + '秒前';
+            if (diff < 3600) return Math.floor(diff / 60) + '分钟前';
+            if (diff < 86400) return Math.floor(diff / 3600) + '小时前';
+            return Math.floor(diff / 86400) + '天前';
+        }
+
+        function formatDisplayTime(dateStr) {
+            const date = new Date(dateStr.replace(/-/g, '/'));
+            const now = new Date();
+            const isToday = date.toDateString() === now.toDateString();
+            if (isToday) return date.toTimeString().split(' ')[0]; // HH:mm:ss
+            return dateStr.substring(5, 16); // mm-dd HH:mm
+        }
+
+        function renderAlertHistory(history) {
+            const logContent = document.getElementById('log-content');
+            const badge = document.getElementById('log-count-badge');
+
+            logContent.innerHTML = '';
+
+            // Group by timestamp to reduce noise
+            const groups = {};
+            history.forEach(item => {
+                if (!groups[item.timestamp]) groups[item.timestamp] = [];
+                groups[item.timestamp].push(item);
+            });
+
+            Object.keys(groups).sort((a, b) => new Date(b.replace(/-/g, '/')) - new Date(a.replace(/-/g, '/'))).forEach(ts => {
+                const groupDiv = document.createElement('div');
+                groupDiv.style.marginBottom = '12px';
+                groupDiv.style.borderBottom = '1px solid rgba(255,255,255,0.05)';
+                groupDiv.style.paddingBottom = '8px';
+
+                const timeLabel = formatDisplayTime(ts);
+                const relTime = timeAgo(ts);
+
+                groupDiv.innerHTML = `
+                    <div style="font-size:11px; font-weight:700; color:var(--text-muted); margin-bottom:6px; display:flex; justify-content:space-between;">
+                        <span>🕒 ${timeLabel}</span>
+                        <span style="color:var(--accent-red)">${relTime}</span>
+                    </div>
+                `;
+
+                groups[ts].forEach(item => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.className = 'log-item';
+                    itemDiv.style.border = 'none';
+                    itemDiv.style.padding = '2px 0';
+                    itemDiv.style.margin = '0';
+
+                    let msg = item.msg;
+                    if (msg.includes(' | ')) {
+                        const parts = msg.split(' | ');
+                        msg = `<strong style="color:#fff">${item.display_name}</strong> <span style="font-size:12px">${parts[1]}</span>`;
+                    }
+
+                    itemDiv.innerHTML = `<div class="log-msg">${msg}</div>`;
+                    groupDiv.appendChild(itemDiv);
+                });
+                logContent.appendChild(groupDiv);
+            });
+
+            if (history.length > 0) {
+                badge.textContent = history.length;
+                badge.style.display = 'inline-block';
+            }
+        }
+
+        function renderBoard(boardName, items, bodyId) {
+            const body = document.getElementById(bodyId);
+            body.innerHTML = '';
+
+            let filteredItems = items;
+            if (boardName === 'merged' && showOnlyWatchlist) {
+                filteredItems = items.filter(item => watchedSymbols.has(item.contract_symbol));
+            }
+
+            const sorted = sortData(filteredItems, sortConfigs[boardName]);
+
+            if (!sorted.length) {
+                body.innerHTML = `<tr><td colspan="14" style="padding:20px 16px; color:var(--text-secondary); text-align:center;">${showOnlyWatchlist ? '暂无关注标的' : '暂无数据'}</td></tr>`;
+                return;
+            }
+
+            sorted.forEach((item, index) => {
+                const tr = document.createElement('tr');
+                tr.className = 'row-updated';
+
+                // 实时视觉与语音通知
+                if (item.is_alert) {
+                    tr.classList.add('alert-row');
+                    if (!notifiedSymbols.has(`${item.contract_symbol}_${item.board_type}`)) {
+                        notifiedSymbols.add(`${item.contract_symbol}_${item.board_type}`);
+                        showToast(`🚀 ${item.display_name} 异动报警!`);
+                        speak(`${item.display_name} 出现横盘警戒`);
+                        // 自动显示面板
+                        const logDiv = document.getElementById('alert-log');
+                        if (logDiv.style.display === 'none' || logDiv.style.display === '') {
+                            logDiv.style.display = 'flex';
+                        }
+                    }
+                }
+
+                const displayRank = index + 1;
+                const rankClass = displayRank <= 3 ? `rank-${displayRank}` : '';
+                const barPct = Math.min(100, (item.duration_hours / 200) * 100);
+                const barColor = barPct > 80 ? 'var(--accent-pink)' : barPct > 50 ? 'var(--accent-amber)' : 'var(--accent-cyan)';
+                const bbwColor = item.bbw < 3 ? 'var(--accent-pink)' : item.bbw < 4 ? 'var(--accent-amber)' : 'var(--accent-cyan)';
+                const ratioClass = item.oi_vol_ratio > 3 ? 'ratio-high' : item.oi_vol_ratio > 1 ? 'ratio-mid' : 'ratio-normal';
+
+                const isWatched = watchedSymbols.has(item.contract_symbol);
+                const distClass = item.oi_mc_ratio > 0.05 ? 'ratio-high' : item.oi_mc_ratio > 0.01 ? 'ratio-mid' : 'ratio-normal';
+                const scoreText = item.long_score > 0 ? `<span class="score-pill score-high">${item.long_score}</span>` : `<span class="score-pill score-none">0</span>`;
+                const distRatioText = item.oi_mc_ratio > 0 && item.oi_mc_ratio !== 999.0 ? (item.oi_mc_ratio * 100).toFixed(2) + '%' : '--';
+                const mcText = item.market_cap > 0 ? formatUSD(item.market_cap) : '--';
+
+                const trendHTML = getTrendBadge(item.trend, item.rank_change);
+                const sourceHTML = getSourceBadge(item.kline_source, item.metric_source, item.metric_freshness_sec, item.confidence, item.alert_eligible);
+                const boardHTML = getBoardBadge(item.board_label, item.sort_priority);
+                const spotText = item.spot_symbol || '--';
+                const ratioText = item.oi_vol_ratio > 0 ? item.oi_vol_ratio.toFixed(2) : '--';
+
+                tr.innerHTML = `
+                    <td><div class="symbol-rank ${rankClass}">${displayRank}</div></td>
+                    <td>
+                        <div class="symbol-cell">
+                            <span class="watch-btn-cell ${isWatched ? 'watched' : ''}" onclick="toggleWatch('${item.contract_symbol}')">${isWatched ? '⭐' : '☆'}</span>
+                            <span class="symbol-name" onclick="window.open('https://www.coinglass.com/tv/zh/Binance_${item.contract_symbol}','_blank')">${item.display_name}</span>
+                        </div>
+                    </td>
+                    <td class="mono" style="font-size:12px; color:var(--text-secondary)">${spotText}</td>
+                    <td>${boardHTML}</td>
+                    <td>
+                        <div class="duration-bar">
+                            <span class="mono" style="min-width:45px">${item.duration_hours}h</span>
+                            <div class="bar-track"><div class="bar-fill" style="width:${barPct}%; background:${barColor}"></div></div>
+                        </div>
+                    </td>
+                    <td><span class="bbw-cell" style="color:${bbwColor}">${item.bbw}%</span></td>
+                    <td><span class="mono" style="font-weight:700; color:${item.price_change_12h >= 0 ? 'var(--accent-green)' : 'var(--accent-red)'}">${item.price_change_12h > 0 ? '+' : ''}${item.price_change_12h}%</span></td>
+                    <td>${scoreText}</td>
+                    <td><span class="ratio-pill ${distClass}">${distRatioText}</span></td>
+                    <td><span class="ratio-pill ${ratioClass}">${ratioText}</span></td>
+                    <td>
+                        <div class="format-num" style="display:flex; flex-direction:column; gap:2px; font-size:11px;">
+                            <span>📦 ${formatUSD(item.oi_value)}</span>
+                            <span>⚡ ${formatUSD(item.vol_value)}</span>
+                            <span>💎 ${mcText}</span>
+                        </div>
+                    </td>
+                    <td>${sourceHTML}</td>
+                    <td>${trendHTML}</td>
+                    <td><div class="sparkline-container">${generateSparklineSVG(item.rank_history)}</div></td>
+                    <td><a href="https://www.coinglass.com/tv/zh/Binance_${item.contract_symbol}" target="_blank" class="link-btn">VIEW</a></td>
+                `;
+                body.appendChild(tr);
+            });
+        }
+
+
+        function renderUncovered() {
+            const body = document.getElementById('uncovered-body');
+            body.innerHTML = '';
+            if (!boards.uncovered.length) {
+                body.innerHTML = `<tr><td colspan="5" style="padding:20px 16px; color:var(--text-secondary); text-align:center;">暂无未覆盖标的</td></tr>`;
+                return;
+            }
+
+            boards.uncovered.forEach(item => {
+                const tr = document.createElement('tr');
+                const metricSource = item.metric_source || 'missing';
+                tr.innerHTML = `
+                    <td class="mono">${item.contract_symbol}</td>
+                    <td class="mono" style="font-size:12px; color:var(--text-secondary)">${item.spot_symbol || '--'}</td>
+                    <td>${getSimpleBadge(item.mapping_status || 'unknown', 'var(--accent-amber)')}</td>
+                    <td>${getSimpleBadge(metricSource, metricSource === 'coinglass' ? 'var(--accent-cyan)' : 'var(--accent-amber)')}</td>
+                    <td style="color:var(--text-secondary)">${item.reason || '--'}</td>
+                `;
+                body.appendChild(tr);
+            });
+        }
+
+        document.querySelectorAll('th.sortable[data-board]').forEach(th => {
+            th.addEventListener('click', () => {
+                const board = th.dataset.board;
+                const key = th.dataset.key;
+                const cfg = sortConfigs[board];
+                if (cfg.key === key) {
+                    cfg.direction = cfg.direction === 'asc' ? 'desc' : 'asc';
+                } else {
+                    cfg.key = key;
+                    cfg.direction = key === 'display_name' ? 'asc' : 'desc';
+                }
+                document.querySelectorAll(`th.sortable[data-board="${board}"]`).forEach(node => node.classList.remove('sort-asc', 'sort-desc'));
+                th.classList.add(cfg.direction === 'asc' ? 'sort-asc' : 'sort-desc');
+                renderBoard(board, boards[board], `${board}-body`);
+            });
+        });
+
+        function sortData(data, cfg) {
+            return [...data].sort((a, b) => {
+                const va = a[cfg.key];
+                const vb = b[cfg.key];
+                if (typeof va === 'string' || typeof vb === 'string') {
+                    return cfg.direction === 'asc'
+                        ? String(va || '').localeCompare(String(vb || ''))
+                        : String(vb || '').localeCompare(String(va || ''));
+                }
+                return cfg.direction === 'asc' ? (va || 0) - (vb || 0) : (vb || 0) - (va || 0);
+            });
+        }
+
+        function getTrendBadge(trend, change) {
+            if (trend === 'NEW') return '<span class="trend-badge trend-new">NEW</span>';
+            if (trend === 'UP') return `<span class="trend-badge trend-up">↑${change}</span>`;
+            if (trend === 'DOWN') return `<span class="trend-badge trend-down">↓${Math.abs(change)}</span>`;
+            return '<span class="trend-badge trend-stable">-</span>';
+        }
+
+        function getSourceBadge(klineSource, metricSource, metricFreshness, confidence, alertEligible) {
+            const klineColor = klineSource === 'binance_vision' ? 'var(--accent-cyan)' : 'var(--accent-amber)';
+            const freshnessText = metricSource === 'missing'
+                ? 'ratio缺失'
+                : metricSource === 'cache'
+                    ? `缓存 ${formatFreshness(metricFreshness)}`
+                    : '实时指标';
+            const alertText = alertEligible ? '可告警' : '仅观察';
+            return `
+                <div style="display:flex; flex-direction:column; gap:4px;">
+                    ${getSimpleBadge(klineSource, klineColor)}
+                    ${getSimpleBadge(freshnessText, metricSource === 'coinglass' ? 'var(--accent-green)' : 'var(--accent-amber)')}
+                    ${getSimpleBadge(`${confidence} / ${alertText}`, alertEligible ? 'var(--accent-blue)' : 'var(--text-secondary)')}
+                </div>
+            `;
+        }
+
+        function getBoardBadge(label, priority) {
+            const color = priority === 0 ? 'var(--accent-cyan)' : 'var(--accent-amber)';
+            return getSimpleBadge(label || '--', color);
+        }
+
+        function getSimpleBadge(text, color) {
+
+            return `<span style="font-size:10px; font-weight:700; padding:2px 6px; border-radius:999px; display:inline-block; width:max-content; color:${color}; border:1px solid ${color}33; background:rgba(255,255,255,0.04);">${text}</span>`;
+        }
+
+        function formatFreshness(seconds) {
+            if (!seconds || seconds <= 0) return '0m';
+            if (seconds < 60) return `${seconds}s`;
+            if (seconds < 3600) return `${Math.floor(seconds / 60)}m`;
+            return `${Math.floor(seconds / 3600)}h`;
+        }
+
+        function formatUSD(val) {
+            if (!val || val === 0) return '--';
+            if (val >= 1e9) return '$' + (val / 1e9).toFixed(1) + 'B';
+            if (val >= 1e6) return '$' + (val / 1e6).toFixed(1) + 'M';
+            if (val >= 1e3) return '$' + (val / 1e3).toFixed(0) + 'K';
+            return '$' + val.toFixed(0);
+        }
+
+        function generateSparklineSVG(history) {
+            if (!history || history.length < 2) return '';
+            const w = 80, h = 24;
+            const max = Math.max(...history, 50);
+            const stepX = w / (history.length - 1);
+            const points = history.map((r, i) => ({
+                x: i * stepX,
+                y: Math.min(h - 2, (r / max) * (h - 4) + 2)
+            }));
+
+            let d = `M ${points[0].x} ${points[0].y}`;
+            for (let i = 0; i < points.length - 1; i++) {
+                const mx = (points[i].x + points[i + 1].x) / 2;
+                d += ` C ${mx} ${points[i].y}, ${mx} ${points[i + 1].y}, ${points[i + 1].x} ${points[i + 1].y}`;
+            }
+            const last = history[history.length - 1];
+            const prev = history[history.length - 2];
+            const color = last <= prev ? 'var(--accent-green)' : 'var(--accent-red)';
+            return `<svg width="${w}" height="${h}"><path d="${d}" fill="none" stroke="${color}" stroke-width="1.5" stroke-linecap="round"/></svg>`;
+        }
+
+        function toggleTTS() {
+            ttsEnabled = !ttsEnabled;
+            const btn = document.getElementById('tts-btn');
+            btn.textContent = ttsEnabled ? '🔊 语音已开启' : '📢 语音预警: 关';
+            btn.className = ttsEnabled ? 'btn btn-alert-on' : 'btn';
+            if (ttsEnabled) speak('语音预警系统已就绪');
+        }
+
+        function speak(text) {
+            if (!ttsEnabled) return;
+            const msg = new SpeechSynthesisUtterance(text);
+            msg.lang = 'zh-CN';
+            msg.rate = 1.1;
+            window.speechSynthesis.speak(msg);
+        }
+
+        // 已整合至 renderAlertHistory 和 renderBoard
+
+        function toggleLogVisibility() {
+            const logDiv = document.getElementById('alert-log');
+            if (logDiv.style.display === 'none' || logDiv.style.display === '') {
+                logDiv.style.display = 'flex';
+                logDiv.classList.remove('minimized');
+                document.getElementById('log-toggle-icon').textContent = '−';
+            } else {
+                logDiv.style.display = 'none';
+            }
+        }
+
+        function toggleLogPanel() {
+            const logDiv = document.getElementById('alert-log');
+            const icon = document.getElementById('log-toggle-icon');
+            logDiv.classList.toggle('minimized');
+            icon.textContent = logDiv.classList.contains('minimized') ? '+' : '−';
+        }
+
+        function showToast(text) {
+            const container = document.getElementById('alert-toast');
+            const div = document.createElement('div');
+            div.className = 'toast-item';
+            div.innerHTML = `<strong>${new Date().toLocaleTimeString()}</strong> ${text}`;
+            container.appendChild(div);
+            setTimeout(() => div.remove(), 8000);
+        }
+
+        function renderDisappearedLog(freshItems, historyItems) {
+            const container = document.getElementById('dis-log-content');
+            const badge = document.getElementById('dis-count-badge');
+            const panel = document.getElementById('disappeared-log');
+            const disBtn = document.getElementById('dis-btn');
+
+            container.innerHTML = '';
+
+            const allItems = [
+                ...freshItems.map(item => ({ ...item, _fresh: true })),
+                ...historyItems.filter(h => !freshItems.some(f => f.contract_symbol === h.contract_symbol && f.board_type === h.board_type))
+            ];
+
+            if (!allItems.length) {
+                container.innerHTML = '<div style="color:var(--text-muted); text-align:center; padding:20px;">暂无消失记录</div>';
+                return;
+            }
+
+            allItems.forEach(item => {
+                const div = document.createElement('div');
+                div.className = `dis-item${item._fresh ? ' fresh' : ''}`;
+                const boardLabel = item.board_type === 'primary' ? '主源' : '补充';
+                const bbwText = item.last_bbw ? (item.last_bbw * 100).toFixed(2) + '%' : '--';
+                const ratioText = item.last_ratio ? item.last_ratio.toFixed(2) : '--';
+
+                const displayTime = formatDisplayTime(item.timestamp);
+                const relTime = timeAgo(item.timestamp);
+
+                div.innerHTML = `
+                    <div class="dis-item-header">
+                        <span class="dis-item-symbol" onclick="window.open('https://www.coinglass.com/tv/zh/Binance_${item.contract_symbol}','_blank')">${item.display_name}</span>
+                        <span class="dis-item-board">${boardLabel}</span>
+                    </div>
+                    <div class="dis-item-meta">
+                        <span>🏆 ${item.on_board_count}轮</span>
+                        <span>📐 ${bbwText}</span>
+                        <span>⚖️ ${ratioText}</span>
+                    </div>
+                    <div class="dis-item-time" style="display:flex; justify-content:space-between; align-items:center;">
+                        <span>${displayTime}</span>
+                        <span style="color:var(--accent-amber); font-weight:600;">${relTime}</span>
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+
+            const total = allItems.length;
+            badge.textContent = total;
+            badge.style.display = total > 0 ? 'inline-block' : 'none';
+
+            if (freshItems.length > 0) {
+                panel.style.display = 'flex';
+                panel.classList.remove('minimized');
+                document.getElementById('dis-toggle-icon').textContent = '−';
+
+                disBtn.style.background = 'var(--accent-amber)';
+                disBtn.style.color = '#000';
+                disBtn.style.borderColor = 'var(--accent-amber)';
+                setTimeout(() => {
+                    disBtn.style.background = '';
+                    disBtn.style.color = '';
+                    disBtn.style.borderColor = '';
+                }, 5000);
+
+                freshItems.forEach(item => {
+                    showToast(`👻 ${item.display_name} 离开横盘 (霸榜${item.on_board_count}轮)`);
+                    speak(`${item.display_name} 已脱离横盘`);
+                });
+            }
+        }
+
+        function toggleDisappearedVisibility() {
+            const panel = document.getElementById('disappeared-log');
+            if (panel.style.display === 'none' || panel.style.display === '') {
+                panel.style.display = 'flex';
+                panel.classList.remove('minimized');
+                document.getElementById('dis-toggle-icon').textContent = '−';
+            } else {
+                panel.style.display = 'none';
+            }
+        }
+
+        function toggleDisPanel() {
+            const panel = document.getElementById('disappeared-log');
+            const icon = document.getElementById('dis-toggle-icon');
+            panel.classList.toggle('minimized');
+            icon.textContent = panel.classList.contains('minimized') ? '+' : '−';
+        }
+    </script>
+</body>
+
+</html>

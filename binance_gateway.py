@@ -68,7 +68,6 @@ def fetch_json(url, retries=3, timeout=60, retry_delay=5, **kwargs):
                 new_base = PROXY_POOL[_proxy_idx]
                 FAPI_BASE, API_BASE = new_base, new_base
                 current_url = current_url.replace(old_base, new_base)
-                # print(f"  🧠 [自动容错] 线路故障，已切换至: {new_base}") # 降低噪音，静默切换
                 time.sleep(retry_delay)
             else:
                 if attempt == retries: return None
@@ -131,8 +130,6 @@ def fetch_cmc_data():
     url = f"{VISION_BASE}/api/v3/ticker/24hr"
     data = fetch_json(url, retries=1, timeout=10) # 快速尝试直连
     if data: return data
-
-    # 直连失败则走反代
     url = f"{API_BASE}/api/v3/ticker/24hr"
     return fetch_json(url)
 
@@ -149,3 +146,9 @@ def fetch_public_spot_klines(symbol, interval="1m", limit=1):
     except:
         pass
     return None
+
+def fetch_futures_ticker(symbol=None):
+    """获取期货 24h 价格变动数据 (计价成交额、价格等)"""
+    url = f"{FAPI_BASE}/fapi/v1/ticker/24hr"
+    params = {"symbol": symbol} if symbol else {}
+    return fetch_json(url, params=params)
