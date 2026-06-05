@@ -4,116 +4,111 @@
             3,
             3,
             3,
-            3,
+            1,
             1
         ],
-        "on_board_count": 23,
-        "last_bbw": 0.03682551726815066,
-        "last_price": 0.31905,
-        "last_seen": "26-06-05 18:55"
+        "on_board_count": 24,
+        "last_bbw": 0.03153302081687163,
+        "last_price": 0.32241,
+        "last_seen": "26-06-05 20:46"
     },
     "PAXGUSDT": {
         "rank_chain": [
             2,
             2,
-            2,
             1,
+            2,
             2
         ],
-        "on_board_count": 321,
-        "last_bbw": 0.044397157890387735,
-        "last_price": 4315.04,
-        "last_seen": "26-06-05 18:55"
+        "on_board_count": 322,
+        "last_bbw": 0.04912912349131073,
+        "last_price": 4322.61,
+        "last_seen": "26-06-05 20:46"
     },
     "XAUTUSDT": {
         "rank_chain": [
             1,
             1,
-            1,
             2,
+            3,
             3
         ],
-        "on_board_count": 743,
-        "last_bbw": 0.04440119919609717,
-        "last_price": 4299.24,
-        "last_seen": "26-06-05 18:55"
+        "on_board_count": 744,
+        "last_bbw": 0.04950359803667012,
+        "last_price": 4303.85,
+        "last_seen": "26-06-05 20:46"
     },
     "SUNUSDT": {
         "rank_chain": [
             5,
-            5,
+            4,
             4,
             4,
             4
         ],
-        "on_board_count": 19,
-        "last_bbw": 0.03272756433316719,
-        "last_price": 0.017328,
-        "last_seen": "26-06-05 18:55"
+        "on_board_count": 20,
+        "last_bbw": 0.02966032293145483,
+        "last_price": 0.017382,
+        "last_seen": "26-06-05 20:46"
     },
     "GPSUSDT": {
         "rank_chain": [
             11,
             10,
             7,
+            5,
             5
         ],
-        "on_board_count": 4,
-        "last_bbw": 0.043771696846154874,
-        "last_price": 0.006851,
-        "last_seen": "26-06-05 18:55"
+        "on_board_count": 5,
+        "last_bbw": 0.042256800966474245,
+        "last_price": 0.006943,
+        "last_seen": "26-06-05 20:46"
     },
     "IDOLUSDT": {
         "rank_chain": [
             13,
             12,
             9,
+            6,
             6
         ],
-        "on_board_count": 4,
-        "last_bbw": 0.039009216432203876,
-        "last_price": 0.02814,
-        "last_seen": "26-06-05 18:55"
+        "on_board_count": 5,
+        "last_bbw": 0.04749150794753832,
+        "last_price": 0.02819,
+        "last_seen": "26-06-05 20:46"
     },
     "ACXUSDT": {
         "rank_chain": [
             13,
             10,
+            7,
             7
         ],
-        "on_board_count": 3,
-        "last_bbw": 0.037926490247712455,
-        "last_price": 0.03953,
-        "last_seen": "26-06-05 18:55"
+        "on_board_count": 4,
+        "last_bbw": 0.046608426756099726,
+        "last_price": 0.04045,
+        "last_seen": "26-06-05 20:46"
     },
     "PROMUSDT": {
         "rank_chain": [
             14,
             11,
+            8,
             8
         ],
-        "on_board_count": 3,
-        "last_bbw": 0.03614760265338817,
-        "last_price": 1.0,
-        "last_seen": "26-06-05 18:55"
-    },
-    "FOLKSUSDT": {
-        "rank_chain": [
-            12,
-            9
-        ],
-        "on_board_count": 2,
-        "last_bbw": 0.054914751079071525,
-        "last_price": 1.2,
-        "last_seen": "26-06-05 18:55"
+        "on_board_count": 4,
+        "last_bbw": 0.035192735916592464,
+        "last_price": 1.015,
+        "last_seen": "26-06-05 20:46"
     },
     "GWEIUSDT": {
         "rank_chain": [
-            10
+            10,
+            9
         ],
-        "on_board_count": 1,
-        "last_bbw": 0.042908658991434034,
-        "last_price": 0.0989,
-        "last_seen": "26-06-05 18:55"
+        "on_board_count": 2,
+        "last_bbw": 0.06068427901603608,
+        "last_price": 0.10513,
+        "last_seen": "26-06-05 20:46"
     }
 }
